@@ -123,6 +123,9 @@ html {
 .first-level-item i {
   font-size: 0.625rem;
 }
+.first-level:hover {
+  cursor: pointer;
+}
 
 /* Second Level List */
 .second-level {
@@ -155,6 +158,9 @@ html {
 }
 .second-level-item:first-child {
   margin-bottom: 0.8125rem;
+}
+.second-level-item:hover {
+  cursor: pointer;
 }
 
 /* Third Level List */

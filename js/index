@@ -80,6 +80,9 @@ const closeMenu = () => {
     if (openSecond) {
         closeServices();
     }
+    if (openThird) {
+        closeSale();
+    }
     firstLevel.style.display = 'none';
     navCloseButton.style.display = 'none';
     navOpenButton.style.display = 'block';

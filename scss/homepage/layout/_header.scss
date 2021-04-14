@@ -85,6 +85,9 @@
             font-size: 0.625rem;
         }
     }
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 /* Second Level List */
@@ -110,6 +113,9 @@
         }
         &:first-child {
             margin-bottom: px-to-rem(13px);
+        }
+        &:hover {
+            cursor: pointer;
         }
     }
 }
