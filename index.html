@@ -21,10 +21,14 @@
         <header>
             <!--Navigation bar-->
             <nav class="nav-bar">
-                <i class="fas fa-bars" id="menu-button"></i>
-                <i class="fas fa-times" id="close-menu-btn"></i>
-                <a href="index.html" id="link">
-                    <img src="img/logo.png" alt="Link to Home" id="logo">
+                <button class="menu-button-open" id="open-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <button class="menu-button-close" id="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <a href="index.html" class="link">
+                    <img src="img/logo.png" alt="Link to Home">
                     <div>
                         <h1>osf</h1>
                         <h2>Academy</h2>
@@ -33,25 +37,25 @@
             </nav>
 
             <!-- Navigation Menu -->
-            <div id="menu-opened">
-                    <ul id="first-level">
-                        <div class="first-level-items">
+            <div class="menu-container" id="first-level">
+                    <ul class="first-level">
+                        <div class="first-level-item">
                             <li>services</li>
-                            <i class="fas fa-caret-down"></i>
+                            <i class="fas fa-caret-down" id="first-arrow"></i>
                         </div>
-                        <div id="second-level">
-                            <ul id="services-items">
-                                <div class="second-level-items">
+                        <div class="second-level" id="second-level">
+                            <ul class="second-level-items">
+                                <div class="second-level-item">
                                     <li>Product Categories</li>
                                     <i class="fas fa-caret-down"></i>
                                 </div>
-                                <div class="second-level-items">
+                                <div class="second-level-item">
                                     <li>Sale</li>
-                                    <i class="fas fa-caret-down"></i>
+                                    <i class="fas fa-caret-down" id="second-arrow"></i>
                                 </div>
                             </ul>
                         </div>
-                        <div id="third-level">
+                        <div class="third-level" id="third-level">
                             <ul>
                                 <li>Accessories</li>
                                 <li>Alcohol</li>
@@ -63,15 +67,15 @@
                                 <li>Food</li>
                             </ul>
                         </div>
-                        <div class="first-level-items">
+                        <div class="first-level-item">
                             <li>company</li>
                             <i class="fas fa-caret-down"></i>
                         </div>
-                        <div class="first-level-items">
+                        <div class="first-level-item">
                             <li>library</li>
                             <i class="fas fa-caret-down"></i>
                         </div>
-                        <div class="first-level-items">
+                        <div class="first-level-item">
                             <li>contact us</li>
                             <i class="fas fa-caret-down"></i>
                         </div>
@@ -90,5 +94,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/index"></script>
     </body>
 </html>

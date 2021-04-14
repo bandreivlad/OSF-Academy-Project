@@ -1,0 +1,10 @@
+%menu-btn-style {
+    width: px-to-rem(25px);
+    margin-left: px-to-perc(14px);
+    border: none;
+    padding: 3px;
+    font-size: 1.5rem;
+    &:focus {
+        outline: none;
+    }
+}

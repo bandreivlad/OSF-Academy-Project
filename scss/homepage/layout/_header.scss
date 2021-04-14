@@ -1,0 +1,146 @@
+/* HEADER */
+
+/* Navigation Bar */
+
+.nav-bar {
+    @include flexy(flex, row, flex-start, center);
+    @include dimension(100%, px-to-rem(60px));
+    box-shadow: 0 2px $shadow-color;
+}
+
+/* Hemburger button */
+.menu-button{
+    &-open {
+        @extend %menu-btn-style;
+    }
+    &-close {
+        @extend %menu-btn-style;
+        display: none;
+    }
+}
+
+/* Home link */
+
+.link {
+    @include flexy(flex, row, center, center);
+    margin-left: px-to-perc(100px); 
+    img {
+        @include dimension(px-to-rem(46px), px-to-rem(46px));
+    }
+    h1 {
+        font-size: 2rem;
+        font-family: $main-font;
+        font-weight: 900;
+        letter-spacing: px-to-rem(6.33px);;
+        text-transform: uppercase;
+        color: $dark-blue-color;
+        margin: 0;
+        display: none;
+    }
+    h2 {
+        font-size: px-to-rem(18px);
+        font-family: $main-font;
+        font-weight: 400;
+        color: $lime-color;
+        margin: 0;
+        display: none;
+    }
+}
+
+/* Navigation Menu */
+
+.menu-container {
+    @include dimension(100%, auto);
+    @include flexy(flex, column, space-between);
+    background-color: #262a32;
+    display: none;
+    img {
+        @include dimension(px-to-perc(271px), auto, 350px);
+        align-self: center;
+        margin-bottom: 17px;
+        border-radius: 7px;
+    }
+}
+
+/* First Level List */
+
+.first-level {
+    @include flexy(flex, column, space-between);
+    @include dimension(100%, auto);
+    padding: 15px 16px 0px 16px;
+    &-item {
+        @include dimension(100%);
+        @include flexy(flex, row, space-between, center);
+        @for $i from 1 through 4 {
+            margin-bottom: px-to-rem(10px);
+        }
+        color: #fff;
+        li {
+            text-transform: uppercase;
+            font-family: $main-font;
+            font-weight: 700;
+            font-size: .9rem;
+        }
+        i {
+            font-size: 0.625rem;
+        }
+    }
+}
+
+/* Second Level List */
+.second-level {
+    @include flexy(flex, column, space-between);
+    display: none;
+    height: auto;
+    margin: 0px 9px 16px;
+    &-items {
+        @include flexy(flex, column, flex-start);
+        color: #fff;
+    }
+    &-item {
+        @include flexy(flex, row, $al-i: center);
+        li {
+            margin-right: px-to-rem(10px);
+            font-family: $main-font;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        i {
+            font-size: 0.625rem;
+        }
+        &:first-child {
+            margin-bottom: px-to-rem(13px);
+        }
+    }
+}
+
+/* Third Level List */
+
+.third-level {
+    margin-left: 18px;
+    margin-bottom: 16px;
+    display: none;
+    ul {
+        @include flexy(flex, column, space-between);
+        height: 228px;
+    }
+    li {
+        color: #fff;
+        font-family: $main-font;
+        font-weight: 400;
+    }
+}
+
+
+@media only screen and (min-width: 768px), (orientation: landscape) {
+
+        /* HEADER */
+
+        /* Home link */
+           .link h1, .link h2 {
+               display: block;
+           }
+           .link:hover {
+            text-decoration: none;
+        }
+}

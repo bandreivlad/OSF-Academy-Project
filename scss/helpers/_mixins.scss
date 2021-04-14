@@ -1,0 +1,32 @@
+// Conversion functions
+
+// Pixels to percentages
+@function px-to-perc($px-val, $ref-width: $max-width-mb) {
+    @return ($px-val/$ref-width) * 100%;
+}
+
+//Pixels to rems
+@function px-to-rem($px-val, $ref-val: 16px) {
+    @return ($px-val/$ref-val) * 1rem;
+}
+
+//Flexbox mixin
+@mixin flexy(
+    $disp: flex, 
+    $dir: null,  
+    $jus: null, 
+    $al-i: null,
+    $wrap: null) {
+    display: $disp;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $al-i;
+    flex-wrap: $wrap;
+}
+
+//Dimensions mixin
+@mixin dimension($w, $h: null, $m-w: null) {
+    width: $w;
+    height: $h;
+    max-width: $m-w;
+}

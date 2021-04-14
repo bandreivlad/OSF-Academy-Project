@@ -1,0 +1,10 @@
+// Importing helpers
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/extensions';
+
+//Importing base styles
+@import 'homepage/base/base';
+
+//Importing layouts
+@import 'homepage/layout/header';
