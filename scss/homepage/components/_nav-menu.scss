@@ -5,6 +5,11 @@
     @include flexy(flex, column, space-between);
     background-color: $dark-gray;
     display: none;
+    ul {
+        @media only screen and #{$brk-med} {
+            // @include
+        }
+    }
     @media only screen and #{$brk-med} {
         display: block;
         background-color: white;
@@ -37,11 +42,19 @@
             }
         }
         @media only screen and #{$brk-med} {
-            @include flexy(flex, row, space-around);
+            @include flexy(flex, row);
             color: $text-color-dk;
+            padding: px-to-rem(10px) 0;
+            &:first-child:hover ~ .second-level {
+                display: block;
+                position: absolute;
+                width: 100%;
+                top: 140px;
+                right: -9px;
+            }
             &:first-child:hover {
-                    background-color: $dark-gray;
-                    border-bottom: 3px solid $lime-color;
+                background-color: $dark-gray;
+                border-bottom: 3px solid $lime-color;
             }
             #first-arrow {
                 display: inline-flex;
@@ -54,6 +67,8 @@
     @media only screen and #{$brk-med} {
         @include flexy(flex, row, space-around, center);
         border-top: 1px solid rgba($dark-gray, 0.15);
+        padding: 0;
+        margin: 0;
     }
 }
 
@@ -85,6 +100,11 @@
             cursor: pointer;
         }
     }
+    @media only screen and #{$brk-med} {
+        background-color: $dark-gray;
+        padding: px-to-rem(58px) px-to-rem(58px) px-to-rem(58px) px-to-rem(58px);
+    }
+    
     /* Third Level List */
     .third-level {
         @include flexy(flex, column, space-between);

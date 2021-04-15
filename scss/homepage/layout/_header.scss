@@ -3,6 +3,7 @@
 @import '../components/home-link';
 @import '../components/nav-menu';
 
+
 /* Navigation Bar */
 .nav-bar {
     @include dimension(100%, auto);
@@ -13,9 +14,8 @@
     box-shadow: 0 2px $shadow-color;
 }
 
-.nav-med-top {
+.menu-container > ul {
     @media only screen and #{$brk-med} {
-        @include flexy(flex, column, center, center);
-        margin: auto;
+        @include flexy(flex, row, space-around, center);
     }
 }

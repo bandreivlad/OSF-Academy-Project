@@ -148,8 +148,15 @@ html {
   .first-level-item {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     color: #45413e;
+    padding: 0.625rem 0;
+  }
+  .first-level-item:first-child:hover ~ .second-level {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 140px;
+    right: -9px;
   }
   .first-level-item:first-child:hover {
     background-color: #262a32;
@@ -169,6 +176,8 @@ html {
     justify-content: space-around;
     align-items: center;
     border-top: 1px solid rgba(38, 42, 50, 0.15);
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -207,6 +216,12 @@ html {
 }
 .second-level-item:hover {
   cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .second-level {
+    background-color: #262a32;
+    padding: 3.625rem 3.625rem 3.625rem 3.625rem;
+  }
 }
 .second-level .third-level {
   display: flex;
@@ -252,12 +267,11 @@ html {
 }
 
 @media only screen and (min-width: 768px) {
-  .nav-med-top {
+  .menu-container > ul {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    margin: auto;
   }
 }
 
