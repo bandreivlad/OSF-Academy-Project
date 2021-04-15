@@ -1,0 +1,16 @@
+.menu-button{
+    margin-left: px-to-perc(14px);
+    &-open {
+        @extend %menu-btn-style;
+    }
+    &-close {
+        @extend %menu-btn-style;
+        display: none;
+    }
+    .btn-checkbox {
+        display: none;
+    }
+    @media only screen and #{$brk-med} {
+        display: none;
+    }
+}

@@ -1,7 +1,10 @@
 // Color variables
 $lime-color: #84bc22;
 $dark-blue-color: #011847;
+$dark-gray: #262a32;
+$white: #ffffff;
 $shadow-color: rgba(232, 226, 214, 0.5);
+$text-color-dk: #45413e;
 
 // Font variables
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
@@ -11,3 +14,6 @@ $main-font: 'Lato', sans-serif;
 
 // Maximum width variables
 $max-width-mb: 320px;
+
+// Breakpoints
+$brk-med: '(min-width: 768px)';

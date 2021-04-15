@@ -16,8 +16,12 @@
     "url": "https://github.com/bandreivlad/OSF-Academy-Project/issues"
   },
   "homepage": "https://github.com/bandreivlad/OSF-Academy-Project#readme",
-  "devDependencies": {
+  "dependencies": {
     "gulp": "^4.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "node-modules": "^1.0.1"
+  },
+  "devDependencies": {
     "gulp-sass": "^4.1.0"
   }
 }

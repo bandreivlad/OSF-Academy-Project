@@ -1,0 +1,45 @@
+/*----------------- Home link -----------------*/
+
+.link {
+    @include flexy(flex, row, center, center);
+    padding-top: px-to-rem(8px);
+    padding-bottom: px-to-rem(13px);
+    img {
+        @include dimension(px-to-rem(46px), px-to-rem(46px));
+    }
+    h1 {
+        font-size: 2rem;
+        font-family: $main-font;
+        font-weight: 900;
+        letter-spacing: px-to-rem(6.33px);;
+        text-transform: uppercase;
+        color: $dark-blue-color;
+        margin: 0;
+        display: none;
+    }
+    h2 {
+        font-size: px-to-rem(18px);
+        font-family: $main-font;
+        font-weight: 400;
+        color: $lime-color;
+        margin: 0;
+        display: none;
+    }
+    h1, h2 {
+        @media only screen and #{$brk-med} {
+            display: block;
+        }
+    }
+    &:hover {
+        @media only screen and #{$brk-med} {
+            text-decoration: none;
+        }
+    }
+}
+
+#link {
+    margin-left: px-to-perc(100px);
+    @media only screen and #{$brk-med} {
+        margin: auto;
+    }
+}

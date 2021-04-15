@@ -1,0 +1,111 @@
+/* Navigation Menu */
+
+.menu-container {
+    @include dimension(100%, auto);
+    @include flexy(flex, column, space-between);
+    background-color: $dark-gray;
+    display: none;
+    @media only screen and #{$brk-med} {
+        display: block;
+        background-color: white;
+    }
+}
+
+/* First Level List */
+
+.first-level {
+    @include flexy(flex, column, space-between);
+    @include dimension(100%, auto);
+    padding: 15px 16px 0px 16px;
+    &-item {
+        @include dimension(100%);
+        @include flexy(flex, row, space-between, center);
+        @for $i from 1 through 4 {
+            padding-bottom: px-to-rem(10px);
+        }
+        color: $white;
+        li {
+            text-transform: uppercase;
+            font-family: $main-font;
+            font-weight: 700;
+            font-size: .9rem;
+        }
+        i {
+            font-size: 0.625rem;
+            @media only screen and #{$brk-med} {
+                display: none;
+            }
+        }
+        @media only screen and #{$brk-med} {
+            @include flexy(flex, row, space-around);
+            color: $text-color-dk;
+            &:first-child:hover {
+                    background-color: $dark-gray;
+                    border-bottom: 3px solid $lime-color;
+            }
+            #first-arrow {
+                display: inline-flex;
+            }
+        }
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    @media only screen and #{$brk-med} {
+        @include flexy(flex, row, space-around, center);
+        border-top: 1px solid rgba($dark-gray, 0.15);
+    }
+}
+
+/* Second Level List */
+.second-level {
+    @include flexy(flex, column, space-between);
+    display: none;
+    height: auto;
+    margin: 0px 9px 16px;
+    &-items {
+        @include flexy(flex, column, flex-start);
+        color: $white;
+    }
+    &-item {
+        @include flexy(flex, row, $al-i: center);
+        li {
+            margin-right: px-to-rem(10px);
+            font-family: $main-font;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        i {
+            font-size: 0.625rem;
+        }
+        &:first-child {
+            margin-bottom: px-to-rem(13px);
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    /* Third Level List */
+    .third-level {
+        @include flexy(flex, column, space-between);
+        margin-left: 18px;
+        margin-top: px-to-rem(16px);
+        display: none;
+        ul {
+            @include flexy(flex, column, space-between);
+            height: 228px;
+        }
+        li {
+            color: #fff;
+            font-family: $main-font;
+            font-weight: 400;
+        }
+    }
+    img {
+        @include dimension(px-to-perc(271px), auto, 350px);
+        margin-bottom: px-to-rem(17px);
+        margin-top: px-to-rem(36px);
+        align-self: center;
+        border-radius: 7px;
+    }
+}
