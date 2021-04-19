@@ -3,19 +3,22 @@
 const navOpenButton = document.getElementById('open-btn');
 const navCloseButton = document.getElementById('close-btn');
 const services = document.getElementsByClassName('first-level-item')[0];
+const prodCat = document.getElementsByClassName('second-level-item')[0];
 const sale = document.getElementsByClassName('second-level-item')[1];
 
 const firstLevel = document.getElementById('first-level');
 const secondLevel = document.getElementById('second-level');
-const thirdLevel = document.getElementById('third-level');
+const thirdLevelFirst = document.getElementById ('third-level-first');
+const thirdLevelSecond = document.getElementById('third-level-second');
 
 const firstArrow = document.getElementById('first-arrow');
 const secondArrow = document.getElementById('second-arrow');
-
-let onPage = true;
+const thirdArrow = document.getElementById('third-arrow');
 
 let openSecond = false;
-let openThird = false;
+let openThirdFirst = false;
+let openThirdSecond = false;
+let angleFirst = 0;
 let angleSecond = 0;
 let angleThird = 0;
 
@@ -23,47 +26,73 @@ if (window.screen.width < 768) {
     const openMenu = () => {
         firstLevel.style.display = 'inline-flex';
         secondLevel.style.display = 'none';
-        thirdLevel.style.display = 'none';
+        thirdLevelFirst.style.display = 'none';
+        thirdLevelSecond.style.display = 'none';
         navOpenButton.style.display = 'none';
         navCloseButton.style.display = 'block';
     }
     
     const openServices = () => {
-        angleSecond += 180;
+        angleFirst += 180;
         secondLevel.style.display = 'inline-flex';
-        thirdLevel.style.display = 'none';
-        firstArrow.style.transform = `rotate(${angleSecond}deg)`;
+        thirdLevelFirst.style.display = 'none';
+        thirdLevelSecond.style.display = 'none';
+        firstArrow.style.transform = `rotate(${angleFirst}deg)`;
         openSecond = true;
     }
     
     const closeServices = () => {
-        angleSecond += 180;
+        angleFirst += 180;
         secondLevel.style.display = 'none';
-        thirdLevel.style.display = 'none';
-        firstArrow.style.transform = `rotate(${angleSecond}deg)`;
+        thirdLevelSecond.style.display = 'none';
+        firstArrow.style.transform = `rotate(${angleFirst}deg)`;
         openSecond = false;
+    }
+
+    const openProdCat = () => {
+        angleSecond += 180;
+        secondLevel.style.display = 'inline-flex';
+        thirdLevelFirst.style.display = 'inline-flex';
+        secondArrow.style.transform = `rotate(${angleSecond}deg)`;
+        openThirdFirst = true;
+    }
+
+    const closeProdCat = () => {
+        angleSecond += 180;
+        secondLevel.style.display = 'inline-flex';
+        thirdLevelFirst.style.display = 'none';
+        secondArrow.style.transform = `rotate(${angleSecond}deg)`;
+        openThirdFirst = false;
     }
     
     const openSale = () => {
         angleThird += 180;
         secondLevel.style.display = 'inline-flex';
-        thirdLevel.style.display = 'inline-flex';
-        secondArrow.style.transform = `rotate(${angleThird}deg)`;
-        openThird = true;
+        thirdLevelSecond.style.display = 'inline-flex';
+        thirdArrow.style.transform = `rotate(${angleThird}deg)`;
+        openThirdSecond = true;
     }
     
     const closeSale = () => {
         angleThird += 180;
         secondLevel.style.display = 'inline-flex';
-        thirdLevel.style.display = 'none';
-        secondArrow.style.transform = `rotate(${angleThird}deg)`;
-        openThird = false;
+        thirdLevelSecond.style.display = 'none';
+        thirdArrow.style.transform = `rotate(${angleThird}deg)`;
+        openThirdSecond = false;
+    }
+
+    const verifyProdCatState = () => {
+        if(openThirdFirst === false) {
+            openProdCat();
+        } else if (openThirdFirst === true) {
+            closeProdCat();
+        }
     }
     
     const verifySaleState = () => {
-        if (openThird === false) {
+        if (openThirdSecond === false) {
             openSale();
-        } else if (openThird === true) {
+        } else if (openThirdSecond === true) {
             closeSale();
         }
     }
@@ -72,7 +101,10 @@ if (window.screen.width < 768) {
         if (openSecond === false) {
             openServices();
         } else if (openSecond === true) {
-            if (openThird) {
+            if (openThirdFirst) {
+                closeProdCat();
+            }
+            if (openThirdSecond) {
                 closeSale();
             }
             closeServices();
@@ -83,7 +115,10 @@ if (window.screen.width < 768) {
         if (openSecond) {
             closeServices();
         }
-        if (openThird) {
+        if (openThirdFirst) {
+            closeProdCat();
+        }
+        if (openThirdSecond) {
             closeSale();
         }
         firstLevel.style.display = 'none';
@@ -93,6 +128,7 @@ if (window.screen.width < 768) {
     
     navOpenButton.addEventListener('click', openMenu);
     services.addEventListener('click', verifyServicesState);
+    prodCat.addEventListener('click', verifyProdCatState);
     sale.addEventListener('click', verifySaleState);
     navCloseButton.addEventListener('click', closeMenu);
 }
