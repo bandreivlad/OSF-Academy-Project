@@ -84,7 +84,7 @@ html {
 }
 
 #link {
-  margin-left: 31.25%;
+  margin: auto;
 }
 @media only screen and (min-width: 768px) {
   #link {
@@ -155,7 +155,7 @@ html {
     color: #45413e;
     padding: 0.625rem 0;
   }
-  .first-level-item:first-child:hover, .first-level-item:first-child:focus-within {
+  .first-level-item:hover, .first-level-item:focus-within {
     background-color: #262a32;
     border-bottom: 3px solid #84bc22;
     color: #ffffff;
@@ -182,7 +182,7 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     border-top: 1px solid rgba(38, 42, 50, 0.15);
     padding: 0;
     margin: 0;
@@ -206,23 +206,28 @@ html {
 }
 @media only screen and (min-width: 768px) {
   .second-level-items {
-    display: start;
+    display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0.9375rem 4% 0.625rem 5%;
   }
 }
 .second-level-item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 13px;
 }
 .second-level-item li {
   margin-right: 0.625rem;
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-weight: 400;
+}
+@media only screen and (min-width: 768px) {
+  .second-level-item li {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 }
 .second-level-item i {
   font-size: 0.625rem;
@@ -238,10 +243,30 @@ html {
 .second-level-item:first-child {
   margin-top: 0;
 }
+.second-level-item-first {
+  margin-bottom: 0.8125rem;
+}
+@media only screen and (min-width: 768px) {
+  .second-level-item-first {
+    width: 60%;
+    max-width: 34.4375rem;
+  }
+}
+.second-level-item-second {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .second-level-item-second {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+  }
+}
 @media only screen and (min-width: 768px) {
   .second-level {
     background-color: #262a32;
-    padding: 3.625rem 3.625rem 3.625rem 3.625rem;
   }
 }
 .second-level img {
@@ -252,6 +277,13 @@ html {
   margin-top: 2.25rem;
   align-self: center;
   border-radius: 7px;
+  object-fit: cover;
+}
+@media only screen and (min-width: 768px) {
+  .second-level img {
+    width: 9.375rem;
+    height: 9.375rem;
+  }
 }
 
 /* Third Level List */
@@ -269,6 +301,16 @@ html {
   flex-direction: column;
   justify-content: space-between;
   height: auto;
+  margin-bottom: 0.8125rem;
+}
+.third-level ul:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 768px) {
+  .third-level ul {
+    margin-bottom: 0;
+    margin-right: 10%;
+  }
 }
 .third-level li {
   color: #fff;
@@ -290,9 +332,22 @@ html {
   color: #ffffff;
 }
 @media only screen and (min-width: 768px) {
-  .third-level {
-    display: block;
+  .third-level .last {
+    margin-right: 0;
   }
+}
+@media only screen and (min-width: 768px) {
+  .third-level {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+}
+
+header {
+  position: fixed;
+  width: 100%;
 }
 
 /* Navigation Bar */

@@ -48,8 +48,8 @@
             @include flexy(flex, row, space-around);
             color: $text-color-dk;
             padding: px-to-rem(10px) 0;
-            &:first-child:hover,
-            &:first-child:focus-within {
+            &:hover,
+            &:focus-within {
                 background-color: $dark-gray;
                 border-bottom: 3px solid $lime-color;
                 color: $white;
@@ -75,7 +75,7 @@
         cursor: pointer;
     }
     @media only screen and #{$brk-med} {
-        @include flexy(flex, row, space-around, center);
+        @include flexy(flex, row, space-around, flex-start);
         border-top: 1px solid rgba($dark-gray, 0.15);
         padding: 0;
         margin: 0;
@@ -92,17 +92,21 @@
         @include flexy(flex, column, flex-start);
         color: $white;
         @media only screen and #{$brk-med} {
-            @include flexy(start, row, space-around, flex-start);
+            @include flexy(flex, row, space-between);
+            padding: px-to-rem(15px) 4% px-to-rem(10px) 5%;
         }
     }
     &-item {
         @include flexy(flex, row, $al-i: center);
-        margin-top: 13px;
         li {
             margin-right: px-to-rem(10px);
             font-family: $main-font;
             font-size: 1rem;
             font-weight: 400;
+            @media only screen and #{$brk-med} {
+                text-transform: uppercase;
+                font-weight: 500;
+            }
         }
         i {
             font-size: 0.625rem;
@@ -116,10 +120,23 @@
         &:first-child {
             margin-top: 0;
         }
+        &-first {
+            margin-bottom: px-to-rem(13px);
+            @media only screen and #{$brk-med} {
+                width: 60%;
+                max-width: px-to-rem(551px);
+            }
+        }
+        &-second {
+            @include flexy(flex, column);
+            @media only screen and #{$brk-med} {
+                @include flexy(flex, row, space-between);
+                width: 40%;
+            }
+        }
     }
     @media only screen and #{$brk-med} {
         background-color: $dark-gray;
-        padding: px-to-rem(58px) px-to-rem(58px) px-to-rem(58px) px-to-rem(58px);
     }
     img {
         @include dimension(px-to-perc(271px), auto, 350px);
@@ -127,6 +144,11 @@
         margin-top: px-to-rem(36px);
         align-self: center;
         border-radius: 7px;
+        object-fit: cover;
+        @media only screen and #{$brk-med} {
+            @include dimension(px-to-rem(150px), px-to-rem(150px));
+            // margin-right: 5%;
+        }
     }
 }
 
@@ -140,6 +162,14 @@
     ul {
         @include flexy(flex, column, space-between);
         height: auto;
+        margin-bottom: px-to-rem(13px);
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media only screen and #{$brk-med} {
+            margin-bottom: 0;
+            margin-right: 10%;
+        }
     }
     li {
         color: #fff;
@@ -160,7 +190,13 @@
         text-decoration: none;
         color: $white;
     }
+    .last {
+        @media only screen and #{$brk-med} {
+            margin-right: 0;
+        }
+    }
     @media only screen and #{$brk-med} {
-        display: block;
+        @include flexy(flex, row, space-between);
+        margin-left: 0;
     }
 }

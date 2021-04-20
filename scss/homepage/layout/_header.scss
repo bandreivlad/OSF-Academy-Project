@@ -3,6 +3,10 @@
 @import '../components/home-link';
 @import '../components/nav-menu';
 
+header {
+    position: fixed;
+    width: 100%;
+}
 
 /* Navigation Bar */
 .nav-bar {

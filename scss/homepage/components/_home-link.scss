@@ -38,7 +38,7 @@
 }
 
 #link {
-    margin-left: px-to-perc(100px);
+    margin: auto;
     @media only screen and #{$brk-med} {
         margin: auto;
     }
