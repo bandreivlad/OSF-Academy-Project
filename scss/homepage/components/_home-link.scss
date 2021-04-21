@@ -6,6 +6,9 @@
     padding-bottom: px-to-rem(13px);
     img {
         @include dimension(px-to-rem(46px), px-to-rem(46px));
+        @media only screen and #{$brk-lg} {
+            @include dimension(px-to-rem(65px), px-to-rem(65px));
+        }
     }
     h1 {
         font-size: 2rem;
