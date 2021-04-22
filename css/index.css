@@ -88,6 +88,11 @@ html {
     text-decoration: none;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .link {
+    padding-bottom: 0.1875rem;
+  }
+}
 
 #link {
   margin: auto;
@@ -95,6 +100,11 @@ html {
 @media only screen and (min-width: 768px) {
   #link {
     margin: auto;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #link {
+    margin-left: 3.4375rem;
   }
 }
 
@@ -127,6 +137,7 @@ html {
   justify-content: space-between;
   width: 100%;
   height: auto;
+  box-sizing: border-box;
   padding: 15px 16px 0px 16px;
 }
 .first-level-item {
@@ -192,7 +203,21 @@ html {
 }
 @media only screen and (min-width: 1280px) {
   .first-level-item {
-    padding-top: 1.25rem;
+    padding-top: 1.1875rem;
+    padding-bottom: 2.0625rem;
+    margin-top: 0.625rem;
+  }
+  .first-level-item:last-child {
+    padding-top: 1.1875rem;
+    padding-bottom: 2.0625rem;
+  }
+  .first-level-item:first-child:hover ~ .second-level, .first-level-item:first-child ~ .second-level:hover, .first-level-item:first-child ~ .second-level:focus {
+    top: 5.125rem;
+  }
+  .first-level-item:first-child {
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 .first-level:hover {
@@ -211,13 +236,12 @@ html {
 }
 @media only screen and (min-width: 1280px) {
   .first-level {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     width: 26rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .first-level {
     height: 4.875rem;
-    margin-top: 0.625rem;
   }
 }
 
@@ -403,6 +427,9 @@ html {
 @media only screen and (min-width: 1280px) {
   .mobile-footer ul {
     width: 12.875rem;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 1.5rem;
   }
 }
 .mobile-footer li {
@@ -432,6 +459,16 @@ html {
     flex-shrink: 2;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .mobile-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 4.1875rem;
+    margin-left: 5.5rem;
+  }
+}
 
 .preferences {
   display: none;
@@ -449,7 +486,10 @@ html {
 }
 @media only screen and (min-width: 1280px) {
   .preferences ul {
+    align-items: flex-start;
     width: 7.1875rem;
+    padding: 0;
+    margin-top: 1.8125rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -467,6 +507,11 @@ html {
     justify-content: space-around;
     width: 21.875%;
     order: 1;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .preferences {
+    margin-left: 2.875rem;
   }
 }
 
@@ -494,7 +539,7 @@ header {
   .nav-bar {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 4.875rem;
   }

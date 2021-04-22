@@ -18,7 +18,7 @@ header {
         }
     }
     @media only screen and #{$brk-lg} {
-        @include flexy(flex, row, space-around, center);
+        @include flexy(flex, row, space-between, center);
         height: px-to-rem(78px);
     }
 }

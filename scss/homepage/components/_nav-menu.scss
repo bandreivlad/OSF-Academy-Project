@@ -21,6 +21,7 @@
 .first-level {
     @include flexy(flex, column, space-between);
     @include dimension(100%, auto);
+    box-sizing: border-box;
     padding: 15px 16px 0px 16px;
     &-item {
         box-sizing: border-box;
@@ -78,7 +79,23 @@
             }
         }
         @media only screen and #{$brk-lg} {
-            padding-top: px-to-rem(20px);
+            padding-top: px-to-rem(19px);
+            padding-bottom: px-to-rem(33px);
+            margin-top: px-to-rem(10px);
+            &:last-child {
+                padding-top: px-to-rem(19px);
+                padding-bottom: px-to-rem(33px);
+            }
+            &:first-child:hover ~ .second-level,
+            &:first-child ~ .second-level:hover,
+            &:first-child ~ .second-level:focus {
+                top: px-to-rem(82px);
+            }
+            &:first-child {
+                justify-content: space-between;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
         }
     }
     &:hover {
@@ -91,11 +108,9 @@
         padding: 0;
     }
     @media only screen and #{$brk-lg} {
+        @include flexy(flex, row, space-between, flex-start);
         width: px-to-rem(416px);
-    }
-    @media only screen and #{$brk-lg} {
         height: px-to-rem(78px);
-        margin-top: px-to-rem(10px);
     }
 }
 
@@ -236,6 +251,9 @@
         }
         @media only screen and #{$brk-lg} {
             width: px-to-rem(206px);
+            padding: 0px;
+            margin-bottom: 0px;
+            margin-top: px-to-rem(24px);
         }
     }
     li {
@@ -261,6 +279,11 @@
         order: 2;
         flex-shrink: 2;
     }
+    @media only screen and #{$brk-lg} {
+        @include flexy(flex, row, center, flex-start);
+        margin-right: px-to-rem(67px);
+        margin-left: px-to-rem(88px);
+    }
 }
 
 .preferences {
@@ -273,7 +296,10 @@
             width: 100%;
         }
         @media only screen and #{$brk-lg} {
+            align-items: flex-start;
             width: px-to-rem(115px);
+            padding: 0;
+            margin-top: px-to-rem(29px);
         }
         li {
             @media only screen and #{$brk-med} {
@@ -288,5 +314,8 @@
         @include flexy(flex, row, space-around);
         width: px-to-perc(70px);
         order: 1;
+    }
+    @media only screen and #{$brk-lg} {
+        margin-left: px-to-rem(46px);
     }
 }

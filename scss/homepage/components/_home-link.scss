@@ -38,11 +38,17 @@
             text-decoration: none;
         }
     }
+    @media only screen and #{$brk-lg} {
+        padding-bottom: px-to-rem(3px);
+    }
 }
 
 #link {
     margin: auto;
     @media only screen and #{$brk-med} {
         margin: auto;
+    }
+    @media only screen and #{$brk-lg} {
+        margin-left: px-to-rem(55px);
     }
 }
