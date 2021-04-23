@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@font-face {
+  font-family: "Myriad Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Regular"), url("../../fonts/MYRIADPRO-REGULAR.woff") format("woff");
+}
 .menu-button-close, .menu-button-open {
   width: 1.5625rem;
   border: none;
@@ -550,6 +556,7 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  background-color: #ffffff;
   box-shadow: 0 2px rgba(232, 226, 214, 0.5);
 }
 @media only screen and (min-width: 1280px) {
@@ -565,6 +572,98 @@ header {
     justify-content: space-around;
     align-items: center;
   }
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+}
+
+.firstCarousel {
+  width: 100%;
+  height: 32.25rem;
+  position: absolute;
+  top: 4.1875rem;
+}
+
+.bd-example {
+  width: 100%;
+  height: 100%;
+  padding: 1.375rem 5%;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px/10px;
+}
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 95%;
+}
+.carousel-indicators {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  top: 27.75rem;
+  width: 6.625rem;
+  margin: auto;
+}
+.carousel-indicators li {
+  width: 0.5625rem;
+  height: 0.5625rem;
+  border-radius: 50%;
+}
+.carousel-indicators li .active {
+  background: transparent;
+  border: 3px solid #ffffff;
+}
+.carousel-caption {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem 5%;
+  text-align: left;
+  background: rgba(30, 29, 34, 0.2);
+}
+.carousel-caption h2 {
+  font-family: "Myriad Pro Regular", Helvetica, Arial, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 3.25rem;
+}
+.carousel-caption p {
+  font-family: "Myriad Pro Regular", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 3.8125rem;
+}
+.carousel-caption a {
+  width: 9.1875rem;
+  height: 2.3125rem;
+  background: rgba(30, 29, 34, 0.5);
+  text-transform: uppercase;
+  border: 2px solid #ffffff;
+  border-radius: 25px/25px;
 }
 
 /*# sourceMappingURL=index.css.map */

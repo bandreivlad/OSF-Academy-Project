@@ -25,6 +25,7 @@ header {
 
 .nav-top {
     @include flexy(flex, row, flex-start, center);
+    background-color: $white;
     box-shadow: 0 2px $shadow-color;
     @media only screen and #{$brk-lg} {
         width: px-to-rem(145px);
