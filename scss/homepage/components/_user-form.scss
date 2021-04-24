@@ -1,0 +1,99 @@
+.modal {
+    &-content {
+        @include dimension(95%, auto);
+        @include flexy(flex, column, space-between, center);
+        margin: auto;
+        @media only screen and #{$brk-med} {
+            @include dimension(px-to-rem(500px), px-to-rem(467px));
+        }
+    }
+    &-body {
+        padding: px-to-perc(30px) px-to-rem(30px) px-to-perc(30px);
+        form {
+            label {
+                margin-bottom: px-to-rem(19px);
+                color: $text-color-dk;
+                font-family: $main-font;
+                font-size: px-to-rem(14px);
+            }
+            input {
+                @include dimension(100%, px-to-rem(36px));
+                margin-bottom: px-to-rem(25px);
+                border: 2px solid #d7d7d7;
+                border-radius: px-to-rem(25px);
+                padding-left: px-to-rem(12px);
+                padding-right: px-to-rem(12px);
+                &:focus {
+                    border: 2px solid #d7d7d7 !important;
+                    border-radius: px-to-rem(25px) !important;
+                    outline: none !important;
+                }
+                @media only screen and #{$brk-med} {
+                    @include dimension(px-to-rem(398px), px-to-rem(36px));
+                }
+            }
+            a {
+                color: $lime-color;
+                font-family: $main-font;
+                font-size: px-to-rem(12px);
+                text-align: right;
+            }
+        }
+    }
+}
+
+.header {
+    margin-bottom: px-to-rem(53px);
+    text-align: center;
+    h5 {
+        color: $text-color-dk;
+        font-family: $main-font;
+        font-size: px-to-rem(30px);
+        font-weight: 900;
+    }
+}
+
+.footer {
+    @include flexy(flex, column, flex-start, center);
+    button {
+        @include dimension(px-to-perc(181px), px-to-rem(36px));
+        margin-bottom: px-to-rem(24px);
+        margin-top: px-to-rem(4px);
+        background-color: $lime-color;
+        color: $white;
+        text-transform: uppercase;
+        font-family: $main-font;
+        font-size: px-to-rem(14px);
+        border: 2px solid $lime-color;
+        border-radius: px-to-rem(25px);
+    }
+    a {
+        color: $lime-color;
+        font-family: $main-font;
+        font-size: px-to-rem(14px);
+    }
+}
+
+.pass{
+    &-label {
+        @include flexy(flex, row, space-between);
+        a {
+            padding-left: px-to-perc(100px);
+            @media only screen and #{$brk-med} {
+                padding-left: px-to-rem(250px);
+            }
+        }
+    }
+    &-input{
+        position: relative;
+        i {
+            color: #c2c2c2;
+            position: absolute;
+            right: 20px;
+            margin-top: px-to-rem(11px);
+            margin-bottom: px-to-rem(11px);
+            cursor: pointer;
+        }
+    }
+}
+

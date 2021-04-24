@@ -527,6 +527,118 @@ html {
   }
 }
 
+.modal-content {
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+@media only screen and (min-width: 768px) {
+  .modal-content {
+    width: 31.25rem;
+    height: 29.1875rem;
+  }
+}
+.modal-body {
+  padding: 9.375% 1.875rem 9.375%;
+}
+.modal-body form label {
+  margin-bottom: 1.1875rem;
+  color: #45413e;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+}
+.modal-body form input {
+  width: 100%;
+  height: 2.25rem;
+  margin-bottom: 1.5625rem;
+  border: 2px solid #d7d7d7;
+  border-radius: 1.5625rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.modal-body form input:focus {
+  border: 2px solid #d7d7d7 !important;
+  border-radius: 1.5625rem !important;
+  outline: none !important;
+}
+@media only screen and (min-width: 768px) {
+  .modal-body form input {
+    width: 24.875rem;
+    height: 2.25rem;
+  }
+}
+.modal-body form a {
+  color: #84bc22;
+  font-family: "Lato", sans-serif;
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+.header {
+  margin-bottom: 3.3125rem;
+  text-align: center;
+}
+.header h5 {
+  color: #45413e;
+  font-family: "Lato", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 900;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footer button {
+  width: 56.5625%;
+  height: 2.25rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.25rem;
+  background-color: #84bc22;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  border: 2px solid #84bc22;
+  border-radius: 1.5625rem;
+}
+.footer a {
+  color: #84bc22;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+}
+
+.pass-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.pass-label a {
+  padding-left: 31.25%;
+}
+@media only screen and (min-width: 768px) {
+  .pass-label a {
+    padding-left: 15.625rem;
+  }
+}
+.pass-input {
+  position: relative;
+}
+.pass-input i {
+  color: #c2c2c2;
+  position: absolute;
+  right: 20px;
+  margin-top: 0.6875rem;
+  margin-bottom: 0.6875rem;
+  cursor: pointer;
+}
+
 header {
   position: fixed;
   width: 100%;
