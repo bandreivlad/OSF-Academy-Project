@@ -6,6 +6,13 @@
     src: local('Myriad Pro Regular'), url('../../fonts/MYRIADPRO-REGULAR.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'Myriad Pro Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Myriad Pro Light'), url('../../fonts/MyriadPro-Light.woff') format('woff');
+    }
+
 // Color variables
 $lime-color: #84bc22;
 $dark-blue-color: #011847;
@@ -14,12 +21,14 @@ $white: #ffffff;
 $shadow-color: rgba(232, 226, 214, 0.5);
 $text-color-dk: #45413e;
 $btn-bg-dk: #1e1d22;
+$facebook-color: #3a5b96;
 
 // Font variables
 
 $base-font: Arial, Helvetica, sans-serif;;
 $main-font: 'Lato', sans-serif;
-$secondary-font: 'Myriad Pro Regular', Helvetica, Arial, sans-serif;
+$secondary-font-h: 'Myriad Pro Regular', Helvetica, Arial, sans-serif;
+$secondary-font-p: 'Myriad Pro Light', Helvetica, Arial, sans-serif;
 
 // Maximum width variables
 $max-width-mb: 320px;

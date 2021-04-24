@@ -1,0 +1,233 @@
+/* Dots Carousel */
+
+.firstCarousel {
+    @include dimension(100%, auto);
+    @media only screen and #{$brk-med} {
+        @include flexy(flex, row, space-between);
+    }
+}
+
+.bd-example {
+    @include dimension(100%, px-to-rem(516px));
+    padding: px-to-rem(22px) px-to-perc(16px);
+    @media only screen and #{$brk-med} {
+        padding-right: px-to-perc(8px);
+        padding-left: px-to-perc(8px);
+        flex: 2 50%;
+    }
+    @media only screen and #{$brk-lg} {
+        flex: 3 70%;
+        padding-top: px-to-rem(26px);
+        padding-left: px-to-rem(55px);
+    }
+}
+
+.carousel {
+    @include dimension(100%, 100%);
+    &-inner {
+        @include dimension(100%, 100%);
+        border-radius: 5px/10px;
+        @media only screen and #{$brk-med} {
+            border-radius: 10px;
+        }
+    }
+    &-item {
+        @include dimension(100%, 100%);
+        img {
+            @include dimension(100%, 100%);
+            object-fit: cover;
+            object-position: 95%;
+            @media only screen and #{$brk-med} {
+                object-position: 99%;
+            }
+        }
+    }
+    &-indicators {
+        @include flexy(flex, row, space-between, center);
+        position: absolute;
+        top: px-to-rem(444px);
+        width: px-to-rem(106px);
+        margin: 0px auto;
+        height: px-to-rem(15px);
+        li {
+            @include dimension(px-to-rem(9px), px-to-rem(9px));
+            border-radius: 50%;
+            border: 0px;
+            &.active {
+                background: transparent;
+                border: 3px solid $white;
+            }
+        }
+        @media only screen and #{$brk-lg} {
+            top: px-to-rem(430px);
+        }
+    }
+
+    &-caption {
+        @include flexy (flex, column, flex-start);
+        @include dimension(100%, 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: px-to-rem(32px) px-to-perc(16px);
+        background: rgba($btn-bg-dk, 0.2);
+        h2 {
+            font-family: $secondary-font-h;
+            font-size: px-to-rem(28px);
+            font-weight: 700;
+            margin-bottom: px-to-rem(52px);
+            @include dimension(px-to-perc(260px));
+            max-width: px-to-rem(559px);
+            min-width: px-to-rem(260px);
+            @media only screen and #{$brk-med} {
+                margin-bottom: px-to-rem(60px);
+            }
+        }
+        p {
+            font-family: $secondary-font-p;
+            font-size: px-to-rem(14px);
+            font-weight: 400;
+            margin-bottom: px-to-rem(61px);
+            @include dimension(px-to-perc(258px));
+            max-width: px-to-rem(336px);
+            min-width: px-to-rem(258px);
+            @media only screen and #{$brk-med} {
+                margin-bottom: px-to-rem(61px);
+            }
+        }
+        a {
+            @include dimension(px-to-rem(147px), px-to-rem(37px));
+            font-family: $main-font;
+            font-size: px-to-rem(14px);
+            font-weight: 400;
+            background: rgba($btn-bg-dk, 0.5);
+            text-transform: uppercase;
+            border: 2px solid #ffffff;
+            border-radius: 25px/25px;
+            &:hover {
+                background-color: rgba($btn-bg-dk, 0.75);
+                border: 2px solid #ffffff;
+            }
+            &:focus {
+                background-color: rgba($btn-bg-dk, 0.75) !important;
+                border: 2px solid #ffffff !important;
+                box-shadow: inset 0 0 0 #ddd !important;
+            }
+        }
+        @media only screen and #{$brk-lg} {
+            padding-top: px-to-rem(80px);
+            padding-right: px-to-rem(30px);
+        }
+    }
+}
+.caption-1 {
+    align-items: flex-start;
+    text-align: left;
+}
+.caption-2 {
+    align-items: center;
+    text-align: center;
+}
+.caption-3 {
+    align-items: flex-end;
+    text-align: right;
+}
+
+/* Aside details */
+
+.details {
+    display: none;
+    @media only screen and #{$brk-med} {
+        @include flexy(flex, column, flex-start);
+        position: relative;
+        padding-top: px-to-rem(22px);
+        padding-bottom: px-to-rem(22px);
+        padding-right: px-to-perc(12px);
+        flex-grow: 1;
+    }
+    @media only screen and #{$brk-lg} {
+        padding-right: px-to-rem(64px);
+        padding-top: px-to-rem(26px);
+    }
+}
+
+.summer-sales {
+    @media only screen and #{$brk-med} {
+        @include flexy(flex, column, flex-start, center);
+        height: px-to-rem(335px);
+        background-color: $lime-color;
+        background-image: url('../../../img/slider/palm.png');
+        background-repeat: no-repeat;
+        background-position-x: left;
+        background-position-y: bottom;
+        border-radius: 5px;
+        color: $white;
+        margin-bottom: px-to-rem(20px);
+        p {
+            margin-top: px-to-perc(69px);
+            font-family: $main-font;
+            font-size: px-to-rem(80px);
+            font-weight: 900;
+        }
+        h6 {
+            margin-top: px-to-perc(69px);
+            width: px-to-rem(102px);
+            text-align: center;
+            text-transform: uppercase;
+            font-size: px-to-rem(18px);
+            font-weight: 400;
+        }
+    }   
+}
+
+.facebook-details {
+    @media only screen and #{$brk-med}{
+        @include flexy(flex, column, flex-start, center);
+        position: relative;
+        h6 {
+            color: $text-color-dk;
+            font-family: $main-font;
+            font-size: px-to-rem(18px);
+            margin-bottom: px-to-rem(17px);
+        }
+        p{
+            color: $text-color-dk;
+            text-align: center;
+            font-family: $secondary-font-p;
+            font-size: px-to-rem(13px);
+        }
+        a {
+            @include dimension(px-to-perc(146px), px-to-rem(36px));
+            @include flexy(flex, row, space-around, center);
+            position: absolute;
+            bottom: -45px;
+            color: $facebook-color;
+            background-color: $white;
+            border: 2px solid $facebook-color;
+            border-radius: 25px;
+            p {
+                margin: 0;
+                color: $facebook-color;
+                text-transform: uppercase;
+                font-family: $main-font;
+                font-size: px-to-rem(14px);
+            }
+            &:hover {
+                background-color: $facebook-color;
+                border: 2px solid $facebook-color;
+            }
+            &:hover > p {
+                color: $white;
+            }
+            &:focus {
+                background-color: $facebook-color !important;
+                border: 2px solid $facebook-color !important;
+                box-shadow: inset 0 0px 0 #ddd !important;
+            }
+            &:focus > p,
+            &:focus > i {
+                color: $white !important;
+            }
+        }
+    }
+}

@@ -5,6 +5,12 @@
   font-weight: normal;
   src: local("Myriad Pro Regular"), url("../../fonts/MYRIADPRO-REGULAR.woff") format("woff");
 }
+@font-face {
+  font-family: "Myriad Pro Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Light"), url("../../fonts/MyriadPro-Light.woff") format("woff");
+}
 .menu-button-close, .menu-button-open {
   width: 1.5625rem;
   border: none;
@@ -574,24 +580,37 @@ header {
   }
 }
 
-main {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  z-index: -1;
-}
-
+/* Dots Carousel */
 .firstCarousel {
   width: 100%;
-  height: 32.25rem;
-  position: absolute;
-  top: 4.1875rem;
+  height: auto;
+}
+@media only screen and (min-width: 768px) {
+  .firstCarousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .bd-example {
   width: 100%;
-  height: 100%;
+  height: 32.25rem;
   padding: 1.375rem 5%;
+}
+@media only screen and (min-width: 768px) {
+  .bd-example {
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    flex: 2 50%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .bd-example {
+    flex: 3 70%;
+    padding-top: 1.625rem;
+    padding-left: 3.4375rem;
+  }
 }
 
 .carousel {
@@ -603,6 +622,11 @@ main {
   height: 100%;
   border-radius: 5px/10px;
 }
+@media only screen and (min-width: 768px) {
+  .carousel-inner {
+    border-radius: 10px;
+  }
+}
 .carousel-item {
   width: 100%;
   height: 100%;
@@ -613,36 +637,47 @@ main {
   object-fit: cover;
   object-position: 95%;
 }
+@media only screen and (min-width: 768px) {
+  .carousel-item img {
+    object-position: 99%;
+  }
+}
 .carousel-indicators {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 27.75rem;
   width: 6.625rem;
-  margin: auto;
+  margin: 0px auto;
+  height: 0.9375rem;
 }
 .carousel-indicators li {
   width: 0.5625rem;
   height: 0.5625rem;
   border-radius: 50%;
+  border: 0px;
 }
-.carousel-indicators li .active {
+.carousel-indicators li.active {
   background: transparent;
   border: 3px solid #ffffff;
 }
+@media only screen and (min-width: 1280px) {
+  .carousel-indicators {
+    top: 26.875rem;
+  }
+}
 .carousel-caption {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   padding: 2rem 5%;
-  text-align: left;
   background: rgba(30, 29, 34, 0.2);
 }
 .carousel-caption h2 {
@@ -650,20 +685,200 @@ main {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 3.25rem;
+  width: 81.25%;
+  max-width: 34.9375rem;
+  min-width: 16.25rem;
+}
+@media only screen and (min-width: 768px) {
+  .carousel-caption h2 {
+    margin-bottom: 3.75rem;
+  }
 }
 .carousel-caption p {
-  font-family: "Myriad Pro Regular", Helvetica, Arial, sans-serif;
+  font-family: "Myriad Pro Light", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   margin-bottom: 3.8125rem;
+  width: 80.625%;
+  max-width: 21rem;
+  min-width: 16.125rem;
+}
+@media only screen and (min-width: 768px) {
+  .carousel-caption p {
+    margin-bottom: 3.8125rem;
+  }
 }
 .carousel-caption a {
   width: 9.1875rem;
   height: 2.3125rem;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
   background: rgba(30, 29, 34, 0.5);
   text-transform: uppercase;
   border: 2px solid #ffffff;
   border-radius: 25px/25px;
+}
+.carousel-caption a:hover {
+  background-color: rgba(30, 29, 34, 0.75);
+  border: 2px solid #ffffff;
+}
+.carousel-caption a:focus {
+  background-color: rgba(30, 29, 34, 0.75) !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: inset 0 0 0 #ddd !important;
+}
+@media only screen and (min-width: 1280px) {
+  .carousel-caption {
+    padding-top: 5rem;
+    padding-right: 1.875rem;
+  }
+}
+
+.caption-1 {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.caption-2 {
+  align-items: center;
+  text-align: center;
+}
+
+.caption-3 {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Aside details */
+.details {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 1.375rem;
+    padding-bottom: 1.375rem;
+    padding-right: 3.75%;
+    flex-grow: 1;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .details {
+    padding-right: 4rem;
+    padding-top: 1.625rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .summer-sales {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20.9375rem;
+    background-color: #84bc22;
+    background-image: url("../../../img/slider/palm.png");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: bottom;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+  }
+  .summer-sales p {
+    margin-top: 21.5625%;
+    font-family: "Lato", sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+  }
+  .summer-sales h6 {
+    margin-top: 21.5625%;
+    width: 6.375rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .facebook-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+  }
+  .facebook-details h6 {
+    color: #45413e;
+    font-family: "Lato", sans-serif;
+    font-size: 1.125rem;
+    margin-bottom: 1.0625rem;
+  }
+  .facebook-details p {
+    color: #45413e;
+    text-align: center;
+    font-family: "Myriad Pro Light", Helvetica, Arial, sans-serif;
+    font-size: 0.8125rem;
+  }
+  .facebook-details a {
+    width: 45.625%;
+    height: 2.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: -45px;
+    color: #3a5b96;
+    background-color: #ffffff;
+    border: 2px solid #3a5b96;
+    border-radius: 25px;
+  }
+  .facebook-details a p {
+    margin: 0;
+    color: #3a5b96;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-size: 0.875rem;
+  }
+  .facebook-details a:hover {
+    background-color: #3a5b96;
+    border: 2px solid #3a5b96;
+  }
+  .facebook-details a:hover > p {
+    color: #ffffff;
+  }
+  .facebook-details a:focus {
+    background-color: #3a5b96 !important;
+    border: 2px solid #3a5b96 !important;
+    box-shadow: inset 0 0px 0 #ddd !important;
+  }
+  .facebook-details a:focus > p, .facebook-details a:focus > i {
+    color: #ffffff !important;
+  }
+}
+
+main {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 4.1875rem;
+  z-index: -1;
+}
+@media only screen and (min-width: 768px) {
+  main {
+    top: 7.8125rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  main {
+    top: 4.875rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
