@@ -1,0 +1,85 @@
+.services {
+    background-color: $text-color-dk;
+    color: $white;
+    &-wrapper {
+        @include flexy(flex, column, center, space-between);
+        padding: px-to-rem(30px) px-to-perc(19px) px-to-rem(39px);
+    }
+    &-focus {
+        @include flexy(flex, row, space-between, center);
+        margin-bottom: px-to-rem(84px);
+        max-width: px-to-rem(282px);
+        img {
+            @include dimension(px-to-rem(60px), px-to-rem(68px));
+            align-self: flex-start;
+            margin-left: px-to-rem(30px);
+            margin-top: px-to-rem(10px);
+        }
+        &-text {
+            width: px-to-rem(134px);
+            h5 {
+                text-transform: uppercase;
+                font-family: $main-font;
+                font-size: px-to-rem(18px);
+                margin-bottom: px-to-rem(20px);
+            }
+            p {
+                color: $text-color-light;
+                font-family: $main-font;
+                font-size: px-to-rem(14px);
+                hyphens: auto;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    &-method {
+        @include flexy(flex, row, space-between, center);
+        max-width: px-to-rem(282px);
+        margin-bottom: px-to-rem(46px);
+        img {
+            margin-right: px-to-rem(30px);
+            align-self: flex-start;
+            order: 1;
+        }
+        &-text {
+            width: px-to-rem(149px);
+            h5 {
+                text-transform: uppercase;
+                font-family: $main-font;
+                font-size: px-to-rem(18px);
+                margin-bottom: px-to-rem(20px);
+            }
+            p {
+                color: $text-color-light;
+                font-family: $main-font;
+                font-size: px-to-rem(14px);
+                hyphens: auto;
+            }
+        }
+    }
+    &-knowledge {
+        @include flexy(flex, row, space-between, center);
+        max-width: px-to-rem(282px);
+        img {
+            margin-left: px-to-rem(45px);
+            align-self: flex-start;
+            order: 0;
+        }
+        &-text {
+            width: px-to-rem(134px);
+            h5 {
+                text-transform: uppercase;
+                font-family: $main-font;
+                font-size: px-to-rem(18px);
+                margin-bottom: px-to-rem(20px);
+            }
+            p {
+                color: $text-color-light;
+                font-family: $main-font;
+                font-size: px-to-rem(14px);
+                hyphens: auto;
+                margin: 0;
+            }
+        }
+    }
+}

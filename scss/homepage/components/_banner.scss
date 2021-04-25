@@ -1,0 +1,27 @@
+.banner {
+    @include dimension(100%, auto);
+    &-wrapper {
+        @include dimension(100%, px-to-perc(185px));
+        @include flexy(flex, column, center, center);
+        background-image: url('../../../img/banner.png');
+        background-repeat: no-repeat;
+        background-position: 80%;
+        background-size: cover;
+    }
+    &-content {
+        width: px-to-perc(300px);
+        padding: px-to-rem(30px) px-to-perc(22px) px-to-rem(60px);        
+        color: $white;
+        text-align: center;
+        h2 {
+            font-family: $main-font;
+            font-size: px-to-rem(30px);
+            margin-bottom: px-to-rem(40px);
+        }
+        p {
+            font-family: $secondary-font-p;
+            font-size: px-to-rem(14px);
+            margin: 0px;
+        }
+    }
+}
