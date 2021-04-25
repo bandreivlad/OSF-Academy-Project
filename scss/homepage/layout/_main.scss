@@ -1,10 +1,16 @@
 @import '../components/first-carousel';
+@import '../components/popular-items';
 
-main {
+.main-content {
     @include dimension(100%, auto);
-    position: absolute;
+    position: relative;
     top: px-to-rem(67px);
     z-index: -1;
+    padding-bottom: px-to-rem(57px);
+}
+
+main {
+    @include dimension(100%, 100%);
     @media only screen and #{$brk-med} {
         top: px-to-rem(125px);
     }

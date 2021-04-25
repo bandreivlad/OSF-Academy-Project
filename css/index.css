@@ -642,6 +642,7 @@ html {
 header {
   position: fixed;
   width: 100%;
+  background-color: #ffffff;
 }
 
 /* Navigation Bar */
@@ -705,56 +706,56 @@ header {
   }
 }
 
-.bd-example {
+.carousel-wrapper {
   width: 100%;
   height: 32.25rem;
   padding: 1.375rem 5%;
 }
 @media only screen and (min-width: 768px) {
-  .bd-example {
+  .carousel-wrapper {
     padding-right: 2.5%;
     padding-left: 2.5%;
     flex: 2 50%;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .bd-example {
+  .carousel-wrapper {
     flex: 3 70%;
     padding-top: 1.625rem;
     padding-left: 3.4375rem;
   }
 }
 
-.carousel {
+.carousel-container {
   width: 100%;
   height: 100%;
 }
-.carousel-inner {
+.carousel-container-inner {
   width: 100%;
   height: 100%;
   border-radius: 5px/10px;
 }
 @media only screen and (min-width: 768px) {
-  .carousel-inner {
+  .carousel-container-inner {
     border-radius: 10px;
   }
 }
-.carousel-item {
+.carousel-container-item {
   width: 100%;
   height: 100%;
 }
-.carousel-item img {
+.carousel-container-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 95%;
 }
 @media only screen and (min-width: 768px) {
-  .carousel-item img {
+  .carousel-container-item img {
     object-position: 99%;
   }
 }
-.carousel-indicators {
+.carousel-container-indicators {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -765,22 +766,22 @@ header {
   margin: 0px auto;
   height: 0.9375rem;
 }
-.carousel-indicators li {
+.carousel-container-indicators li {
   width: 0.5625rem;
   height: 0.5625rem;
   border-radius: 50%;
   border: 0px;
 }
-.carousel-indicators li.active {
+.carousel-container-indicators li.active {
   background: transparent;
   border: 3px solid #ffffff;
 }
 @media only screen and (min-width: 1280px) {
-  .carousel-indicators {
+  .carousel-container-indicators {
     top: 26.875rem;
   }
 }
-.carousel-caption {
+.carousel-container-caption {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -792,7 +793,7 @@ header {
   padding: 2rem 5%;
   background: rgba(30, 29, 34, 0.2);
 }
-.carousel-caption h2 {
+.carousel-container-caption h2 {
   font-family: "Myriad Pro Regular", Helvetica, Arial, sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
@@ -802,11 +803,11 @@ header {
   min-width: 16.25rem;
 }
 @media only screen and (min-width: 768px) {
-  .carousel-caption h2 {
+  .carousel-container-caption h2 {
     margin-bottom: 3.75rem;
   }
 }
-.carousel-caption p {
+.carousel-container-caption p {
   font-family: "Myriad Pro Light", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
@@ -816,11 +817,11 @@ header {
   min-width: 16.125rem;
 }
 @media only screen and (min-width: 768px) {
-  .carousel-caption p {
+  .carousel-container-caption p {
     margin-bottom: 3.8125rem;
   }
 }
-.carousel-caption a {
+.carousel-container-caption a {
   width: 9.1875rem;
   height: 2.3125rem;
   font-family: "Lato", sans-serif;
@@ -831,17 +832,17 @@ header {
   border: 2px solid #ffffff;
   border-radius: 25px/25px;
 }
-.carousel-caption a:hover {
+.carousel-container-caption a:hover {
   background-color: rgba(30, 29, 34, 0.75);
   border: 2px solid #ffffff;
 }
-.carousel-caption a:focus {
+.carousel-container-caption a:focus {
   background-color: rgba(30, 29, 34, 0.75) !important;
   border: 2px solid #ffffff !important;
   box-shadow: inset 0 0 0 #ddd !important;
 }
 @media only screen and (min-width: 1280px) {
-  .carousel-caption {
+  .carousel-container-caption {
     padding-top: 5rem;
     padding-right: 1.875rem;
   }
@@ -975,12 +976,101 @@ header {
   }
 }
 
-main {
+.popular-items {
   width: 100%;
   height: auto;
-  position: absolute;
+  background-color: #262a32;
+}
+.popular-items-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 1.5625rem 5%;
+}
+.popular-items-wrapper h3 {
+  color: #ffffff;
+  text-transform: capitalize;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 0.5rem 1.1875rem 0.875rem;
+  margin-bottom: 0.4375rem;
+}
+.popular-items-carousel-wrapper {
+  width: 100%;
+  height: auto;
+}
+.popular-items-carousel-container {
+  width: 100%;
+  height: 25.5625rem;
+}
+.popular-items-carousel-inner {
+  width: 100%;
+  height: 22.875rem;
+}
+.popular-items-carousel-indicators {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 6.625rem;
+  margin: 0px auto;
+}
+.popular-items-carousel-indicators li {
+  width: 0.5625rem;
+  height: 0.5625rem;
+  border-radius: 50%;
+  border: 0px;
+}
+.popular-items-carousel-indicators li.active {
+  background: transparent;
+  border: 3px solid #ffffff;
+}
+
+.card {
+  outline: 0px;
+  border: 0px;
+  border-radius: 5px;
+}
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 106px;
+}
+.card-body h6 {
+  color: #45413e;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1.0625rem;
+  width: 12.5rem;
+}
+.card-body p {
+  color: #011847;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+}
+
+.main-content {
+  width: 100%;
+  height: auto;
+  position: relative;
   top: 4.1875rem;
   z-index: -1;
+  padding-bottom: 3.5625rem;
+}
+
+main {
+  width: 100%;
+  height: 100%;
 }
 @media only screen and (min-width: 768px) {
   main {

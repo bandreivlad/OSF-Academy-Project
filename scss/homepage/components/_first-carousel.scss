@@ -7,7 +7,7 @@
     }
 }
 
-.bd-example {
+.carousel-wrapper {
     @include dimension(100%, px-to-rem(516px));
     padding: px-to-rem(22px) px-to-perc(16px);
     @media only screen and #{$brk-med} {
@@ -22,7 +22,7 @@
     }
 }
 
-.carousel {
+.carousel-container {
     @include dimension(100%, 100%);
     &-inner {
         @include dimension(100%, 100%);
