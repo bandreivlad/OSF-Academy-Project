@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+// Importing helpers
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/extensions';
+
+//Importing base styles
+@import 'homepage/base/base';
+
+//Importing layouts
+@import 'homepage/layout/header';
+@import 'homepage/layout/main';
+@import 'homepage/layout/footer';
+
+//Importing components
+@import 'page404/main-content';

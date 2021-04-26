@@ -1,0 +1,64 @@
+main {
+    background-color: $background-404;
+}
+
+.page-not-found {
+    @include dimension(100%, auto);
+}
+
+.wrapper {
+    &-principal {
+        @include dimension(100%, auto);
+    }
+    &-secondary {
+        @include flexy(flex, column, flex-start, center);
+        padding: px-to-rem(20px) px-to-perc(15px);
+    }
+}
+
+.header {
+    &-content {
+        @include flexy(flex, column, flex-start);
+        text-align: center;
+        h3 {
+            color: $text-color-dk;
+            font-family: $main-font;
+            font-weight: 900;
+            font-size: px-to-rem(48px);
+        }
+    }
+    &-breadcrumb {
+        font-size: px-to-rem(13px);
+        font-family: $main-font;
+        margin-bottom: px-to-rem(27px);
+        ol {
+            justify-content: center;
+            padding: 0px;
+            margin: 0px;
+        }
+        ol li:first-child {
+            a {
+                color: $lime-color;
+            }
+        }
+        ol li:last-child {
+            a {
+                color: $text-color-dk;
+            }
+        }
+    }
+}
+
+.main-404-content {
+    @include flexy(flex, column, flex-start, center);
+    &-title {
+        p {
+            color: $lime-color;
+            font-family: $main-font;
+            font-size: px-to-rem(70px);
+            font-weight: 900;
+            padding-top: px-to-rem(40px);
+            padding-bottom: px-to-rem(40px);
+        }
+    }
+}

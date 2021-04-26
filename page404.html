@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Not Found</title>
+
+        <!--Font Awesome-->
+        <script src="https://kit.fontawesome.com/1723eb2e00.js" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/page404.css">
+    </head>
+
+    <body>
+        <!-- Log In Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Sign in</h5>
+                        </div>
+                        <form action="index.html" method="POST" id="user-form">
+                            <label for="email">Email</label><br>
+                            <input type="email" id="email" name="user_email" required><br>
+                            <div class="pass-label">
+                                <label for="password">Password</label>
+                                <a href="#">forgot password</a><br>
+                            </div>
+                            <div class="pass-input">
+                                <input type="password" id="password" name="user_password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}" required>
+                                <i class="far fa-eye" id="togglePassword"></i>
+                            </div>
+                        </form>
+                        <div class="footer">
+                            <button type="submit" form="user-form" value="login">login</button>
+                            <a href="#">I don't have an account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header>
+            <!--Navigation bar-->
+            <nav class="nav-bar">
+                <div class="nav-top">
+                    <div class="menu-button">
+                        <button class="menu-button-open" id="open-btn">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <button class="menu-button-close" id="close-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="nav-med-top" id="link">
+                        <a href="index.html" class="link">
+                            <img src="img/logo.png" alt="Link to Home">
+                            <div>
+                                <h1>osf</h1>
+                                <h2>Academy</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Navigation Menu -->
+                <div class="nav-menu">
+                    <div class="mobile-footer">
+                        <ul>
+                            <li><i class="fas fa-search"></i></li>
+                            <li type="button" data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-user"></i></li>
+                            <li><i class="far fa-heart"></i></li>
+                            <li><i class="fas fa-shopping-bag"></i></li>
+                        </ul>
+                    </div>
+                    <div class="preferences">
+                        <ul>
+                            <li>en
+                                <i class="fas fa-caret-down"></i>
+                            </li>
+                            <li>&dollar; us
+                                <i class="fas fa-caret-down"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-container" id="first-level">
+                        <ul>
+                            <div class="first-level">
+                                <div class="first-level-item">
+                                    <li>services</li>
+                                    <i class="fas fa-caret-down" id="first-arrow"></i>
+                                </div>
+                                <div class="second-level" id="second-level">
+                                    <ul class="second-level-items">
+                                        <div class="second-level-item-first">
+                                            <div class="second-level-item">
+                                                <li>Product Categories</li>
+                                                <i class="fas fa-caret-down" id="second-arrow"></i>
+                                            </div>
+                                            <div class="third-level" id="third-level-first">
+                                                <ul>
+                                                    <li><a href="#">Accessories</a></li>
+                                                    <li><a href="#">Alcohol</a></li>
+                                                    <li><a href="#">Art</a></li>
+                                                    <li><a href="#">Books</a></li>
+                                                    <li><a href="#">Drink</a></li>
+                                                    <li><a href="#">Electronics</a></li>
+                                                    <li><a href="#">Flowers &amp; Plants</a></li>
+                                                    <li><a href="#">Food</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><a href="#">Gadgets</a></li>
+                                                    <li><a href="#">Garden</a></li>
+                                                    <li><a href="#">Grocery</a></li>
+                                                    <li><a href="#">Home</a></li>
+                                                    <li><a href="#">Jewelry</a></li>
+                                                    <li><a href="#">Kids &amp; Baby</a></li>
+                                                    <li><a href="#">Men's Fashion</a></li>
+                                                    <li><a href="#">Mobile</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><a href="#">Motorcycles</a></li>
+                                                    <li><a href="#">Movies</a></li>
+                                                    <li><a href="#">Music</a></li>
+                                                    <li><a href="#">Office</a></li>
+                                                    <li><a href="#">Pets</a></li>
+                                                    <li><a href="#">Romantic</a></li>
+                                                    <li><a href="#">Sport</a></li>
+                                                    <li><a href="#">Toys</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="second-level-item-second">
+                                            <div>
+                                                <div class="second-level-item">
+                                                    <li>Sale</li>
+                                                    <i class="fas fa-caret-down" id="third-arrow"></i>
+                                                </div>
+                                                <div class="third-level" id="third-level-second">
+                                                    <ul class="last">
+                                                        <li><a href="#">Accessories</a></li>
+                                                        <li><a href="#">Alcohol</a></li>
+                                                        <li><a href="#">Art</a></li>
+                                                        <li><a href="#">Books</a></li>
+                                                        <li><a href="#">Drink</a></li>
+                                                        <li><a href="#">Electronics</a></li>
+                                                        <li><a href="#">Flowers &amp; Plants</a></li>
+                                                        <li><a href="#">Food</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <img src="img/hamburger-opened.png" alt="Fashiong girl with bags">
+                                        </div>
+                                    </ul>
+                                </div>
+                                <div class="first-level-item">
+                                    <li>company</li>
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="first-level-item">
+                                    <li>library</li>
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="first-level-item">
+                                    <li>contact us</li>
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="main-content">
+            <main>
+                <section class="page-not-found">
+                    <div class="wrapper-principal">
+                        <div class="wrapper-secondary">
+                            <div class="header-content">
+                                <div class="header-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">404</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <h3>404</h3>
+                            </div>
+                            <div class="main-404-content">
+                                <div class="main-404-content-title">
+                                    <p>Oops!</p>
+                                </div>
+                                <div class="main-404-content-text">
+                                    <h6>Sorry, this page could not be found!</h6>
+                                    <div class="main-404-content-text-paragraph">
+                                        <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                                    </div>
+                                    <p><a href="/index.html">Go back to Homepage</a></p>
+                                    <div class="main-404-content-text-search">
+                                        <label for="search">Search our site</label>
+                                        <input type="text" id="search" name="user_search" placeholder="SEARCH">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-header">
+                        <div class="copyright">
+                            <p>&copy; Copyright <span id="year"></span>.</p>
+                            <p>All Rights Reserved.</p>
+                        </div>
+                        <div class="footer-contact">
+                            <div class="footer-list">
+                                <h6>contact</h6>
+                                <i class="fas fa-caret-down" id="first-footer-arrow"></i>
+                            </div>
+                            <div class="footer-contact-content">
+                                <address>
+                                    Headquarters:<br>
+                                    5600, Blvd. des Galeries, Bur 530<br>
+                                    Quebec, Quebec G2K 2H6
+                                </address>
+                                <div class="footer-contact-content-details">
+                                    <p><a href="mailto:contact@osf-global.com">contact@osf-global.com</a></p><br>
+                                    <p><a href="tel:+18885484344">+1 (888) 548-4344</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-main">
+                        <div class="footer-categories">
+                            <div class="footer-list">
+                                <h6>categories</h6>
+                                <i class="fas fa-caret-down" id="second-footer-arrow"></i>
+                            </div>
+                            <div class="footer-categories-content">
+                                <ul>
+                                    <li><a href="#">alcohol</a></li>
+                                    <li><a href="#">art</a></li>
+                                    <li><a href="#">books</a></li>
+                                    <li><a href="#">drink</a></li>
+                                    <li><a href="#">electronics</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">home</a></li>
+                                    <li><a href="#">jewelry</a></li>
+                                    <li><a href="#">kids &amp; baby</a></li>
+                                    <li><a href="#">men's fashion</a></li>
+                                    <li><a href="#">mobile</a></li>
+                                    <li><a href="#">motorcycles</a></li>
+                                    <li><a href="#">movies</a></li>
+                                    <li><a href="#">music</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">sport</a></li>
+                                    <li><a href="#">toys</a></li>
+                                    <li><a href="#">travel</a></li>
+                                    <li><a href="#">women's fashion</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-about">
+                            <div class="footer-list">
+                                <h6>about</h6>
+                                <i class="fas fa-caret-down" id="third-footer-arrow"></i>
+                            </div>
+                            <div class="footer-about-content">
+                                <ul>
+                                    <li><a href="#">about us</a></li>
+                                    <li><a href="#">delivery</a></li>
+                                    <li><a href="#">testimonials</a></li>
+                                    <li><a href="#">contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-footer">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://plus.google.com/" target="_blank">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/" target="_blank">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        <!-- Bootstrap scripts -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!-- My scripts -->
+        <script src="js/index.js"></script>
+    </body>
+</html>
