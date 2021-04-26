@@ -9,6 +9,12 @@
     top: px-to-rem(67px);
     z-index: -1;
     padding-bottom: px-to-rem(57px);
+    @media only screen and #{$brk-med} {
+        top: px-to-rem(125px);
+    }
+    @media only screen and #{$brk-lg} {
+        top: px-to-rem(67px);
+    }
 }
 
 main {

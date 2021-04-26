@@ -5,14 +5,41 @@
         @include dimension(100%, auto);
         padding: px-to-rem(25px) px-to-perc(16px);
         h3 {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
             color: $white;
             text-transform: capitalize;
             text-align: center;
             font-family: $main-font;
             font-size: px-to-rem(18px);
             font-weight: 700;
+            background-color: $dark-gray;
             padding: px-to-rem(8px) px-to-rem(19px) px-to-rem(14px);
             margin-bottom: px-to-rem(7px);
+            &::before{
+                position: absolute;
+                top: 45%;
+                overflow: hidden;
+                width: 40%;
+                height: 3px;
+                content: '\a0';
+                background-color: rgba($white, 0.1);
+                text-align: right;
+                margin-left: px-to-perc(-160px);
+            }
+            &::after {
+                position: absolute;
+                top: 45%;
+                overflow: hidden;
+                width: 40%;
+                height: 3px;
+                content: '\a0';
+                background-color: rgba($white, 0.1);
+                text-align: left;
+                margin-left: px-to-perc(30px);
+            }
+
         }
     }
     &-carousel {

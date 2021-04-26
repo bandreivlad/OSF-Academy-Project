@@ -1,0 +1,167 @@
+footer {
+    @include dimension(100%, auto);
+    background-color: $white;
+    p {
+        margin: 0;
+    }
+    h6 {
+        margin: 0;
+    }
+    address {
+        margin: 0;
+    }
+    ul {
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: $text-color-dk;
+    }
+}
+
+.footer {
+    &-container {
+        @include dimension(100%, auto);
+        padding: px-to-rem(23px) px-to-perc(15px) px-to-rem(27px);
+        color: $text-color-dk;
+        p {
+            font-family: $main-font;
+            font-size: px-to-rem(13px);
+        }
+        @media only screen and #{$brk-med} {
+            @include flexy(flex, row, space-between, flex-start);
+        }
+    }
+    &-header {
+        margin-bottom: px-to-rem(24px);
+        @media only screen and #{$brk-med} {
+            width: px-to-perc(60px);
+        }
+    }
+    &-main {
+        @media only screen and #{$brk-med} {
+            @include flexy(flex, row);
+            width: px-to-perc(200px);
+        }
+    }
+    &-list {
+        @include flexy(flex, row, space-between);
+        &:hover {
+            cursor: pointer;
+        }
+        margin-bottom: px-to-rem(22px);
+        h6 {
+            text-transform: uppercase;
+            font-family: $main-font;
+            font-size: px-to-rem(13px);
+            color: #333333;
+            font-weight: 900;
+        }
+        i {
+            color: rgba(#262a32, 0.7);
+            font-size: px-to-rem(12px);
+            @media only screen and #{$brk-med} {
+                display: none;
+            }
+        }
+    }
+    &-contact{
+        &-content {
+            display: none;
+            height: auto;
+            color: $text-color-dk;
+            font-family: $main-font;
+            font-size: px-to-rem(13px);
+            address {
+                margin-bottom: px-to-rem(20px);
+            }
+            &-details {
+                p:first-child {
+                    padding-bottom: px-to-rem(6px);
+                }
+                a:hover {
+                    text-decoration: none;
+                    color: $dark-gray;
+                    font-weight: 600;
+                }
+            }
+            @media only screen and #{$brk-med} {
+                display: block;
+            }
+        }
+    }
+    &-categories {
+        &-content {
+            display: none;
+            padding-bottom: px-to-rem(28px);
+            li {
+                padding-bottom: px-to-rem(5px);
+                font-family: $main-font;
+                font-size: px-to-rem(13px);
+                @media only screen and #{$brk-med} {
+                    line-height: px-to-rem(31px);
+                }
+            }
+            a {
+                text-transform: capitalize;
+                &:hover {
+                    text-decoration: none;
+                    color: $dark-gray;
+                    font-weight: 600;
+                }
+            }
+            @media only screen and #{$brk-med} {
+                @include flexy(flex, row, space-between);
+                padding-bottom: 0px;
+            }
+        }
+        @media only screen and #{$brk-med} {
+            width: px-to-perc(240px);
+            margin-right: px-to-perc(35px);
+        }
+    }
+    &-about {
+        &-content {
+            display: none;
+            padding-bottom: px-to-rem(28px);
+            li {
+                padding-bottom: px-to-rem(5px);
+                font-family: $main-font;
+                font-size: px-to-rem(13px);
+                @media only screen and #{$brk-med} {
+                    line-height: px-to-rem(31px);
+                }
+            }
+            a {
+                text-transform: capitalize;
+                &:hover {
+                    text-decoration: none;
+                    color: $dark-gray;
+                    font-weight: 600;
+                }
+            }
+            @media only screen and #{$brk-med} {
+                display: block;
+            }
+        }
+    }
+    &-footer {
+        @include flexy(flex, row, space-between, center);
+        width: px-to-perc(120px);
+        margin: auto;
+        i {
+            color: rgba($dark-gray, 0.5);
+        }
+        i:hover {
+            color: rgba($dark-gray, 0.8);
+        }
+        @media only screen and #{$brk-med} {
+            width: px-to-perc(40px);
+            margin: 0px;
+        }
+    }
+}
+
+.copyright {
+    margin-bottom: px-to-rem(24px);
+}

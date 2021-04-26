@@ -22,7 +22,26 @@ let angleFirst = 0;
 let angleSecond = 0;
 let angleThird = 0;
 
+// Footer Menu Mobile
+const contact = document.getElementsByClassName('footer-list')[0];
+const categories = document.getElementsByClassName('footer-list')[1];
+const about = document.getElementsByClassName('footer-list')[2];
+
+const contactContent = document.getElementsByClassName('footer-contact-content')[0];
+const categoriesContent = document.getElementsByClassName('footer-categories-content')[0];
+const aboutContent = document.getElementsByClassName('footer-about-content')[0];
+
+const firstFooterArrow = document.getElementById('first-footer-arrow');
+const secondFooterArrow = document.getElementById('second-footer-arrow');
+const thirdFooterArrow = document.getElementById('third-footer-arrow');
+
+let angleFooterFirst = 180;
+let angleFooterSecond = 180;
+let angleFooterThird = 180;
+
+// Functionality for mobile menus
 if (window.screen.width < 768) {
+    // Header
     const openMenu = () => {
         firstLevel.style.display = 'inline-flex';
         secondLevel.style.display = 'none';
@@ -131,6 +150,47 @@ if (window.screen.width < 768) {
     prodCat.addEventListener('click', verifyProdCatState);
     sale.addEventListener('click', verifySaleState);
     navCloseButton.addEventListener('click', closeMenu);
+
+    // Footer
+    const toggleContact = () => {
+        if(contactContent.style.display === 'none') {
+            angleFooterFirst += 180;
+            firstFooterArrow.style.transform = `rotate(${angleFooterFirst}deg)`;
+            contactContent.style.display = 'block';
+        } else {
+            angleFooterFirst += 180;
+            contactContent.style.display = 'none';
+            firstFooterArrow.style.transform = `rotate(${angleFooterFirst}deg)`;
+        }
+    }
+
+    const toggleCategories = () => {
+        if(categoriesContent.style.display === 'none') {
+            angleFooterSecond += 180;
+            categoriesContent.style.display = 'block';
+            secondFooterArrow.style.transform = `rotate(${angleFooterSecond}deg)`;
+        } else {
+            angleFooterSecond += 180;
+            categoriesContent.style.display = 'none';
+            secondFooterArrow.style.transform = `rotate(${angleFooterSecond}deg)`;
+        }
+    }
+
+    const toggleAbout = () => {
+        if(aboutContent.style.display === 'none') {
+            angleFooterThird += 180;
+            aboutContent.style.display = 'block';
+            thirdFooterArrow.style.transform = `rotate(${angleFooterThird}deg)`;
+        } else {
+            angleFooterThird += 180;
+            aboutContent.style.display = 'none';
+            thirdFooterArrow.style.transform = `rotate(${angleFooterThird}deg)`;
+        }
+    }
+
+    contact.addEventListener('click', toggleContact);
+    categories.addEventListener('click', toggleCategories);
+    about.addEventListener('click', toggleAbout);
 }
 
 // Toggle password visibility and eye type
@@ -139,3 +199,5 @@ togglePassword.addEventListener('click', function (e) {
     password.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
 });
+
+// Toggle Footer Menu
