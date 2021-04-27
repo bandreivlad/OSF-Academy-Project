@@ -10,18 +10,60 @@
     &-secondary {
         @include flexy(flex, column, flex-start, center);
         padding: px-to-rem(20px) px-to-perc(15px);
+        @media only screen and #{$brk-med} {
+            padding-right: px-to-rem(30px);
+            padding-left: px-to-rem(30px);
+        }
+        @media only screen and #{$brk-lg} {
+            padding: px-to-rem(50px) px-to-rem(55px) px-to-rem(41px);
+        }
     }
 }
 
 .header {
     &-content {
+        @include dimension(100%, auto);
         @include flexy(flex, column, flex-start);
         text-align: center;
         h3 {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
             color: $text-color-dk;
             font-family: $main-font;
             font-weight: 900;
             font-size: px-to-rem(48px);
+            // background-color: $background-404;
+            &::before{
+                position: absolute;
+                z-index: -1;
+                top: 50%;
+                overflow: hidden;
+                width: 100%;
+                height: 3px;
+                content: '\a0';
+                background-color: #e5e2df;
+                text-align: right;
+                margin-left: px-to-perc(-340px);
+            }
+            &::after{
+                position: absolute;
+                z-index: -1;
+                top: 50%;
+                overflow: hidden;
+                width: 100%;
+                height: 3px;
+                content: '\a0';
+                background-color: #e5e2df;
+                text-align: right;
+                margin-left: px-to-perc(20px);
+            }
+        }
+        @media only screen and #{$brk-med} {
+            margin-bottom: px-to-rem(70px);
+        }
+        @media only screen and #{$brk-lg} {
+            margin-bottom: px-to-rem(127px);
         }
     }
     &-breadcrumb {
@@ -43,6 +85,13 @@
                 color: $text-color-dk;
             }
         }
+        @media only screen and #{$brk-med} {
+            margin-top: px-to-rem(30px);
+        }
+        @media only screen and #{$brk-lg} {
+            margin-top: 0px;
+            margin-bottom: px-to-rem(27px);
+        }
     }
 }
 
@@ -56,6 +105,23 @@
             font-weight: 900;
             padding-top: px-to-rem(40px);
             padding-bottom: px-to-rem(40px);
+            margin-bottom: 0px;
+            @media only screen and #{$brk-med} {
+                text-align: right;
+                width: px-to-rem(300px);
+                font-size: px-to-rem(90px);
+                padding-bottom: px-to-rem(100px);
+            }
+            @media only screen and #{$brk-lg} {
+                font-size: px-to-rem(113px);
+                padding-bottom: px-to-rem(170px);
+            }
+        }
+        @media only screen and #{$brk-med} {
+            margin-right: px-to-perc(20px);
+        }
+        @media only screen and #{$brk-lg} {
+            margin-right: px-to-rem(106px);
         }
     }
     &-text {
@@ -66,22 +132,45 @@
             margin: 0px;
             font-size: px-to-rem(18px);
             margin-bottom: px-to-rem(20px);
+            @media only screen and #{$brk-med} {
+                margin-bottom: px-to-rem(40px);
+            }
+            @media only screen and #{$brk-lg} {
+                font-size: px-to-rem(24px);
+                margin-bottom: px-to-rem(28px);
+            }
         }
         &-paragraph {
             color: #555555;
             font-family: $main-font;
             font-size: px-to-rem(14px);
             margin-bottom: px-to-rem(35px);
+            @media only screen and #{$brk-med} {
+                margin-bottom: px-to-rem(40px);
+            }
+            @media only screen and #{$brk-lg} {
+                font-size: px-to-rem(16px);
+                margin-bottom: px-to-rem(48px);
+            }
         }
         
         a {
             color: $lime-color;
             font-family: $main-font;
             font-size: px-to-rem(14px);
+            @media only screen and #{$brk-lg} {
+                font-size: px-to-rem(16px);
+            }
         }
         
         & > p {
             padding-bottom: px-to-rem(30px);
+            @media only screen and #{$brk-med} {
+                margin-bottom: px-to-rem(30px);
+            }
+            @media only screen and #{$brk-lg} {
+                margin-bottom: px-to-rem(67px);
+            }
         }
 
         &-search {
@@ -93,6 +182,12 @@
                 font-size: px-to-rem(18px);
                 font-weight: 900;
                 margin-bottom: px-to-rem(15px);
+                @media only screen and #{$brk-lg} {
+                    font-size: px-to-rem(24px);
+                }
+                @media only screen and #{$brk-lg} {
+                    margin-bottom: px-to-rem(25px);
+                }
             }
             input {
                 color: $text-color-dk;
@@ -110,7 +205,25 @@
                 left: px-to-perc(295px);
                 color: $text-color-dk;
                 font-size: px-to-rem(14px);
+                @media only screen and #{$brk-lg} {
+                    top: px-to-rem(63px);
+                    left: px-to-rem(540px);
+                }
+            }
+            @media only screen and #{$brk-med} {
+                margin-bottom: px-to-rem(70px);
             }
         }
+        @media only screen and #{$brk-med} {
+            width: px-to-perc(400px);
+            max-width: px-to-rem(567px);
+        }
+    }
+    @media only screen and #{$brk-med} {
+        @include flexy(flex, row, space-around);
+        @include dimension(100%, auto);
+    }
+    @media only screen and #{$brk-lg} {
+        justify-content: center;
     }
 }
