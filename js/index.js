@@ -188,6 +188,7 @@ if (window.screen.width < 768) {
         }
     }
 
+    // Toggle Footer Menu
     contact.addEventListener('click', toggleContact);
     categories.addEventListener('click', toggleCategories);
     about.addEventListener('click', toggleAbout);
@@ -199,5 +200,3 @@ togglePassword.addEventListener('click', function (e) {
     password.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
 });
-
-// Toggle Footer Menu
