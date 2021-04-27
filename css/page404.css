@@ -1629,13 +1629,10 @@ footer a {
   margin-bottom: 1.5rem;
 }
 
-main {
-  background-color: #f1edea;
-}
-
 .page-not-found {
   width: 100%;
   height: auto;
+  background-color: #f1edea;
 }
 
 .wrapper-principal {
@@ -1692,6 +1689,57 @@ main {
   font-weight: 900;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+.main-404-content-text h6 {
+  color: #000000;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  margin: 0px;
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+}
+.main-404-content-text-paragraph {
+  color: #555555;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  margin-bottom: 2.1875rem;
+}
+.main-404-content-text a {
+  color: #84bc22;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+}
+.main-404-content-text > p {
+  padding-bottom: 1.875rem;
+}
+.main-404-content-text-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+.main-404-content-text-search label {
+  color: #000000;
+  font-family: "Lato", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 900;
+  margin-bottom: 0.9375rem;
+}
+.main-404-content-text-search input {
+  color: #45413e;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  border: 2px solid #e8e2d6;
+  border-radius: 25px;
+  padding: 0.3125rem 0.9375rem;
+}
+.main-404-content-text-search i {
+  position: absolute;
+  top: 2.8125rem;
+  left: 92.1875%;
+  color: #45413e;
+  font-size: 0.875rem;
 }
 
 /*# sourceMappingURL=page404.css.map */

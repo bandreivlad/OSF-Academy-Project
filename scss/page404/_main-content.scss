@@ -1,9 +1,6 @@
-main {
-    background-color: $background-404;
-}
-
 .page-not-found {
     @include dimension(100%, auto);
+    background-color: $background-404;
 }
 
 .wrapper {
@@ -59,6 +56,61 @@ main {
             font-weight: 900;
             padding-top: px-to-rem(40px);
             padding-bottom: px-to-rem(40px);
+        }
+    }
+    &-text {
+        h6 {
+            color: #000000;
+            font-family: $main-font;
+            font-weight: 900;
+            margin: 0px;
+            font-size: px-to-rem(18px);
+            margin-bottom: px-to-rem(20px);
+        }
+        &-paragraph {
+            color: #555555;
+            font-family: $main-font;
+            font-size: px-to-rem(14px);
+            margin-bottom: px-to-rem(35px);
+        }
+        
+        a {
+            color: $lime-color;
+            font-family: $main-font;
+            font-size: px-to-rem(14px);
+        }
+        
+        & > p {
+            padding-bottom: px-to-rem(30px);
+        }
+
+        &-search {
+            @include flexy(flex, column, flex-start);
+            position: relative;
+            label {
+                color: #000000;
+                font-family: $main-font;
+                font-size: px-to-rem(18px);
+                font-weight: 900;
+                margin-bottom: px-to-rem(15px);
+            }
+            input {
+                color: $text-color-dk;
+                // background-color: #1e1d22;
+                text-transform: uppercase;
+                font-family: $main-font;
+                font-size: px-to-rem(14px);
+                border: 2px solid #e8e2d6;
+                border-radius: 25px;
+                padding: px-to-rem(5px) px-to-rem(15px);
+            }
+            i {
+                position: absolute;
+                top: px-to-rem(45px);
+                left: px-to-perc(295px);
+                color: $text-color-dk;
+                font-size: px-to-rem(14px);
+            }
         }
     }
 }
