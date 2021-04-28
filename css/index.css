@@ -646,6 +646,7 @@ body {
 
 header {
   position: fixed;
+  z-index: 2;
   width: 100%;
   background-color: #ffffff;
 }
@@ -1558,7 +1559,7 @@ header {
 .main-content {
   width: 100%;
   height: auto;
-  position: relative;
+  position: absolute;
   top: 4.1875rem;
   z-index: -1;
   padding-bottom: 3.5625rem;

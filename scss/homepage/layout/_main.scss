@@ -5,7 +5,7 @@
 
 .main-content {
     @include dimension(100%, auto);
-    position: relative;
+    position: absolute;
     top: px-to-rem(67px);
     z-index: -1;
     padding-bottom: px-to-rem(57px);
