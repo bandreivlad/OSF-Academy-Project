@@ -280,7 +280,7 @@
 }
 
 .no-func {
-    background-image: linear-gradient(to top, rgba(#675b99, 0.8) 0%, rgba(#dc5987, 0.8) 100%), url('/img/popular-items/product-images/work.png');
+    background-image: linear-gradient(to top, rgba(#675b99, 0.8) 0%, rgba(#dc5987, 0.8) 100%), url("../../../img/popular-items/product-images/work.png");
     .card-body {
         @media only screen and #{$brk-med} {
             @include flexy(flex, column, flex-end, flex-start);
