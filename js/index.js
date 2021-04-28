@@ -212,7 +212,7 @@ const wrapper = document.getElementsByClassName('popular-items-wrapper-products'
 const loadMoreItems = () => {
     // Making AJAX request on product-details.json
     const myRequest = new XMLHttpRequest();
-    myRequest.open('GET', '/product_details.json');
+    myRequest.open('GET', 'product_details.json');
     myRequest.onload = () => {
         const myData = JSON.parse(myRequest.responseText);
         const images = myData.images;

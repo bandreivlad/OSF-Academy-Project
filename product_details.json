@@ -1,18 +1,18 @@
 {
     "images": [
-        "/img/popular-items/product-images/beauty.png",
-        "/img/popular-items/product-images/calendar.png",
-        "/img/popular-items/product-images/checked.png",
-        "/img/popular-items/product-images/compas.png",
-        "/img/popular-items/product-images/economy.png",
-        "/img/popular-items/product-images/girl.png",
-        "/img/popular-items/product-images/hotel.png",
-        "/img/popular-items/product-images/keyboard.png",
-        "/img/popular-items/product-images/no_image.png",
-        "/img/popular-items/product-images/player.png",
-        "/img/popular-items/product-images/salesforce.png",
-        "/img/popular-items/product-images/timer.png",
-        "/img/popular-items/product-images/touch-pen.png"
+        "img/popular-items/product-images/beauty.png",
+        "img/popular-items/product-images/calendar.png",
+        "img/popular-items/product-images/checked.png",
+        "img/popular-items/product-images/compas.png",
+        "img/popular-items/product-images/economy.png",
+        "img/popular-items/product-images/girl.png",
+        "img/popular-items/product-images/hotel.png",
+        "img/popular-items/product-images/keyboard.png",
+        "img/popular-items/product-images/no_image.png",
+        "img/popular-items/product-images/player.png",
+        "img/popular-items/product-images/salesforce.png",
+        "img/popular-items/product-images/timer.png",
+        "img/popular-items/product-images/touch-pen.png"
     ],
     "details": [
         "Kristina Dam Oak Table With White Marble Top",
