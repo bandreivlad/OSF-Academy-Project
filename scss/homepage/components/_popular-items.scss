@@ -67,26 +67,28 @@
                 @include flexy(flex, column, center);
                 margin-bottom: px-to-rem(51px);
             }
-            &-block:first-child {
-                margin-bottom: px-to-rem(50px);
-            }
             &-block {
                 display: grid;
+                margin-top: px-to-rem(50px);
                 grid-template-columns: px-to-rem(271px) px-to-rem(271px);
                 grid-template-rows: px-to-rem(366px) px-to-rem(366px);
                 justify-content: center;
                 align-content: center;
                 gap: px-to-rem(50px) px-to-rem(90px);
             }
+            &-block:first-child {
+                margin-top: 0px;
+            }
             @media only screen and #{$brk-lg} {
-                &-block:first-child {
-                    margin-bottom: px-to-rem(29px);
-                }
                 &-block {
+                    margin-top: px-to-rem(29px);
                     grid-template-columns: repeat(4, px-to-rem(271px));
                     grid-template-rows: px-to-rem(366px);
                     gap: px-to-rem(29px);
                 } 
+                &-block:first-child {
+                    margin-top: 0px;
+                }
             }
         }
         &-item {
@@ -122,12 +124,12 @@
                     opacity: 1;
                 }
             }
-        }
-        @media only screen and #{$brk-med} {
-            padding: px-to-rem(60px) px-to-perc(28px) px-to-rem(60px);
             &:hover {
                 cursor: pointer;
             }
+        }
+        @media only screen and #{$brk-med} {
+            padding: px-to-rem(60px) px-to-perc(28px) px-to-rem(60px);
         }
         @media only screen and #{$brk-lg} {
             padding: px-to-rem(81px) px-to-rem(56px) px-to-rem(60px);
@@ -209,7 +211,7 @@
         padding: px-to-rem(13px) px-to-perc(30px);
         &:hover {
             cursor: pointer;
-            background-color: lighten($dark-gray, 0.1);
+            background-color: lighten($dark-gray, 5%);
         }
         &:focus {
             outline: none;

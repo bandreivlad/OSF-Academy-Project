@@ -1,0 +1,37 @@
+{
+    "images": [
+        "/img/popular-items/product-images/beauty.png",
+        "/img/popular-items/product-images/calendar.png",
+        "/img/popular-items/product-images/checked.png",
+        "/img/popular-items/product-images/compas.png",
+        "/img/popular-items/product-images/economy.png",
+        "/img/popular-items/product-images/girl.png",
+        "/img/popular-items/product-images/hotel.png",
+        "/img/popular-items/product-images/keyboard.png",
+        "/img/popular-items/product-images/no_image.png",
+        "/img/popular-items/product-images/player.png",
+        "/img/popular-items/product-images/salesforce.png",
+        "/img/popular-items/product-images/timer.png",
+        "/img/popular-items/product-images/touch-pen.png"
+    ],
+    "details": [
+        "Kristina Dam Oak Table With White Marble Top",
+        "EAMES x Cast + Crew - Custom Powder Coated",
+        "Activate Facial Mask and Charcoal Soap ",
+        "Vitra Cork Stool B, Cork - Design Within Reach",
+        "Hay - About A Lounge Chair AAL 93",
+        "         TORY DESK CALENDAR        ",
+        "CH445 Wing Chair on        SUITE NY",
+        "MONOQI | Ø55 Crossit Table - Wht/Grn"
+    ],
+    "prices": [
+        799.55,
+        129.55,
+        299.99,
+        659.55,
+        410.99,
+        330.55,
+        2195.00,
+        870.95
+    ]
+}

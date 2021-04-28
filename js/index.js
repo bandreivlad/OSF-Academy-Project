@@ -200,3 +200,113 @@ togglePassword.addEventListener('click', function (e) {
     password.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
 });
+
+// Load More Button
+
+// Selecting the Load More button
+const loadMore = document.getElementById('load-more');
+
+// Selecting Popular Items Wrapper Products
+const wrapper = document.getElementsByClassName('popular-items-wrapper-products')[0];
+
+const loadMoreItems = () => {
+    // Making AJAX request on product-details.json
+    const myRequest = new XMLHttpRequest();
+    myRequest.open('GET', '/product_details.json');
+    myRequest.onload = () => {
+        const myData = JSON.parse(myRequest.responseText);
+        const images = myData.images;
+        const details = myData.details;
+        const prices = myData.prices;
+
+        // Create new block of four cards
+        const newBlock = document.createElement('div');
+        newBlock.className = "popular-items-wrapper-products-block";
+        wrapper.appendChild(newBlock);
+
+        //Create new card
+        let counter = 0; 
+        const createNewCard = () => {
+            const newCard = document.createElement('div');
+            newCard.className = "card popular-items-wrapper-item";
+            newBlock.appendChild(newCard);
+
+            const newImage = document.createElement('IMG');
+            newImage.className = "card-img-top";
+            newImage.src = images[Math.floor(Math.random() * images.length)];
+            newCard.appendChild(newImage);
+
+            const newCardBody = document.createElement('div');
+            newCardBody.className = "card-body";
+            newCard.appendChild(newCardBody);
+
+            const cardDetails = document.createElement('h6');
+            cardDetails.textContent = details[Math.floor(Math.random() * details.length)];
+            newCardBody.appendChild(cardDetails);
+
+            const cardPrice = document.createElement('p');
+            cardPrice.textContent = `$ ${prices[Math.floor(Math.random() * prices.length)]}`;
+            newCardBody.appendChild(cardPrice);
+
+            // Adding the overlay
+            const overlay = document.createElement('div');
+            overlay.className = "popular-items-wrapper-item-overlay";
+            newCard.appendChild(overlay);
+
+            const addToCartBtn = document.createElement('button');
+            addToCartBtn.className = "addToCart";
+            overlay.appendChild(addToCartBtn);
+
+            const addIcon = document.createElement('i');
+            addIcon.className = "fas fa-plus";
+            addToCartBtn.appendChild(addIcon);
+
+            const addToWishlistBtn = document.createElement('button');
+            addToWishlistBtn.className = "addToWishlist";
+            overlay.appendChild(addToWishlistBtn);
+
+            const heartIcon = document.createElement('i');
+            heartIcon.className = "fas fa-heart";
+            addToWishlistBtn.appendChild(heartIcon);
+        }
+
+        // Create 4 cards every time
+        while (counter < 4) {
+            createNewCard();
+            counter +=1;
+        }
+    }
+    myRequest.send();
+}
+
+// Adding functionality to Load More
+loadMore.addEventListener('click', loadMoreItems);
+
+console.log(wrapper);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
