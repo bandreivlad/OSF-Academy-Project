@@ -3,7 +3,7 @@
     &-wrapper {
         @include dimension(100%, px-to-perc(185px));
         @include flexy(flex, column, center, center);
-        background-image: url("../../../img/cover.png");
+        background-image: url(../../../img/cover.png);
         background-repeat: no-repeat;
         background-position: 80%;
         background-size: cover;
