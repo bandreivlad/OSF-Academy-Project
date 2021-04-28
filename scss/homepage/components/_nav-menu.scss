@@ -21,11 +21,11 @@
 .first-level {
     @include flexy(flex, column, space-between);
     @include dimension(100%, auto);
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     padding: 15px 16px 0px 16px;
     &-item {
-        box-sizing: border-box;
-        @include dimension(100%);
+        box-sizing: border-box !important;
+        @include dimension(100%, auto);
         @include flexy(flex, row, space-between, center);
         @for $i from 1 through 4 {
             padding-bottom: px-to-rem(15px);
@@ -48,6 +48,7 @@
         }
         @media only screen and #{$brk-med} {
             @include flexy(flex, row, space-around);
+            box-sizing: border-box;
             color: $text-color-dk;
             padding-top: px-to-rem(14px);
             padding-bottom: px-to-rem(14px);
@@ -80,16 +81,16 @@
         }
         @media only screen and #{$brk-lg} {
             padding-top: px-to-rem(19px);
-            padding-bottom: px-to-rem(33px);
+            padding-bottom: px-to-rem(30px);
             margin-top: px-to-rem(10px);
             &:last-child {
                 padding-top: px-to-rem(19px);
-                padding-bottom: px-to-rem(33px);
+                padding-bottom: px-to-rem(30px);
             }
             &:first-child:hover ~ .second-level,
             &:first-child ~ .second-level:hover,
             &:first-child ~ .second-level:focus {
-                top: px-to-rem(82px);
+                top: px-to-rem(78.2px);
             }
             &:first-child {
                 justify-content: space-between;

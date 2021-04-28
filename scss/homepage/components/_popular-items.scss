@@ -50,7 +50,7 @@
                     top: 50%;
                 }
             }
-            @media only screen and #{$brk-med} {
+            @media only screen and #{$brk-lg} {
                 &::before {
                     width: 45%;
                     margin-left: px-to-rem(-550px);
@@ -96,25 +96,38 @@
                 }
             }
             &-overlay {
-                @include flexy(flex, row, center, center);
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background: linear-gradient(to top, #1cc167 0%, #2ed3a2 100%);
-                border-radius: inherit;
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.4s ease;
+                @media only screen and #{$brk-med} {
+                    @include flexy(flex, row, center, center);
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: linear-gradient(to top, #1cc167 0%, #2ed3a2 100%);
+                    border-radius: inherit;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.4s ease;
+                }
             }
-            &:hover ~ &-overlay{
-                opacity: 0.9;
-                visibility: visible;
+            @media only screen and #{$brk-med} {
+                &:hover &-overlay {
+                    opacity: 0.9;
+                    visibility: visible;
+                }
+                &:hover &-overlay .addToCart {
+                    opacity: 1;
+                }
+                &:hover &-overlay .addToWishlist {
+                    opacity: 1;
+                }
             }
         }
         @media only screen and #{$brk-med} {
             padding: px-to-rem(60px) px-to-perc(28px) px-to-rem(60px);
+            &:hover {
+                cursor: pointer;
+            }
         }
         @media only screen and #{$brk-lg} {
             padding: px-to-rem(81px) px-to-rem(56px) px-to-rem(60px);
@@ -196,6 +209,10 @@
         padding: px-to-rem(13px) px-to-perc(30px);
         &:hover {
             cursor: pointer;
+            background-color: lighten($dark-gray, 0.1);
+        }
+        &:focus {
+            outline: none;
         }
     }
     i {
@@ -206,6 +223,7 @@
     }
 }
 
+/* Overlay buttons  */
 .addToCart, .addToWishlist {
     @include dimension(px-to-rem(91px), px-to-rem(91px));
     background-color: $white;
@@ -213,6 +231,9 @@
     border-radius: 50%;
     i {
         font-size: px-to-rem(31px);
+    }
+    &:focus {
+        outline: none;
     }
 }
 
@@ -231,4 +252,60 @@
         background-color: darken($white, 5%);
 		box-shadow: 0 0 20px darken(#1cc167, 20%);
     }
+}
+
+/* Tile buy now button */
+
+#buy-now {
+    width: px-to-rem(199px);
+    @include flexy(flex, row, space-between);
+    padding: px-to-rem(5px) px-to-rem(22px);
+    margin-top: px-to-rem(-6px);
+    border: 2px solid rgba(#000000, 0.1);
+    background-color: rgba(#1e1d22, 0.1);
+    border-radius: px-to-rem(25px);
+    p {
+        margin: 0px;
+        &:first-child {
+            color: $add-to-cart;
+        }
+        &:last-child {
+            text-transform: uppercase;
+            color: #000;
+            font-weight: bold;
+        }
+    }
+}
+
+.no-func {
+    background-image: linear-gradient(to top, rgba(#675b99, 0.8) 0%, rgba(#dc5987, 0.8) 100%), url('/img/popular-items/product-images/work.png');
+    .card-body {
+        @media only screen and #{$brk-med} {
+            @include flexy(flex, column, flex-end, flex-start);
+            p {
+                color: $white;
+                font-family: $main-font;
+                font-size: px-to-rem(16px);
+                text-align: left;
+                line-height: px-to-rem(24px);
+                &:first-child {
+                    width: px-to-rem(132px);
+                    margin-bottom: px-to-rem(20px);
+                }
+                &:last-child {
+                    i {
+                        color: $lime-color;
+                        @include dimension(px-to-rem(24px), px-to-rem(28px));
+                        font-size: 20px;
+                        margin-right: px-to-rem(10px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#no-hover:hover .popular-items-wrapper-item-overlay {
+    opacity: 0;
+    visibility: visible;
 }
