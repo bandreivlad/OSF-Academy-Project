@@ -903,7 +903,7 @@ header {
     align-items: center;
     height: 20.9375rem;
     background-color: #84bc22;
-    background-image: url("../../../img/slider/palm.png");
+    background-image: url("../../../img/slider/palm.jpg");
     background-repeat: no-repeat;
     background-position-x: left;
     background-position-y: bottom;
@@ -1293,7 +1293,7 @@ header {
 }
 
 .no-func {
-  background-image: linear-gradient(to top, rgba(103, 91, 153, 0.8) 0%, rgba(220, 89, 135, 0.8) 100%), url("../../../img/popular-items/product-images/work.png");
+  background-image: linear-gradient(to top, rgba(103, 91, 153, 0.8) 0%, rgba(220, 89, 135, 0.8) 100%), url("../../../img/popular-items/product-images/work.jpg");
 }
 @media only screen and (min-width: 768px) {
   .no-func .card-body {
@@ -1338,7 +1338,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../../../img/cover.png");
+  background-image: url("../../../img/cover.jpg");
   background-repeat: no-repeat;
   background-position: 80%;
   background-size: cover;

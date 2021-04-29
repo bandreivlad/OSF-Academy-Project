@@ -282,8 +282,6 @@ const loadMoreItems = () => {
 // Adding functionality to Load More
 loadMore.addEventListener('click', loadMoreItems);
 
-console.log(wrapper);
-
 
 
 
