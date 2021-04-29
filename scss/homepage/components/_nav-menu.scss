@@ -57,8 +57,7 @@
                     margin-right: -40px;
                 }
             }
-            &:hover,
-            &:focus-within {
+            &:hover {
                 background-color: $dark-gray;
                 border-bottom: 3px solid $lime-color;
                 color: $white;
@@ -201,6 +200,9 @@
         @media only screen and #{$brk-med} {
             margin-bottom: 0;
             margin-right: 10%;
+            &:first-child {
+                margin-left: 0px;
+            }
         }
     }
     li {
@@ -338,5 +340,13 @@
     }
     @media only screen and #{$brk-lg} {
         margin-left: px-to-rem(46px);
+    }
+}
+
+@media only screen and #{$brk-med} {
+    .second-level:hover ~ .first-level-item:first-child {
+        background-color: $dark-gray;
+        border-bottom: 3px solid $lime-color;
+        color: $white;
     }
 }
