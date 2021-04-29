@@ -283,6 +283,12 @@ const loadMoreItems = () => {
 loadMore.addEventListener('click', loadMoreItems);
 
 
+// Automatic inject year to footer
+const year = document.getElementById('year');
+year.innerText = new Date().getFullYear();
+
+
+
 
 
 
