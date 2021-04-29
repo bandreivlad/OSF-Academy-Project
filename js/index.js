@@ -287,8 +287,23 @@ loadMore.addEventListener('click', loadMoreItems);
 const year = document.getElementById('year');
 year.innerText = new Date().getFullYear();
 
+// buttons for cart and wishlist
+const btnBuyNow = document.getElementById('buy-now');
+const textWished = document.getElementById('wished-items');
+const textCart = document.getElementById('cart-items');
+const btnAddToWishlist = document.querySelectorAll('.addToWishlist');
+const btnAddToCart = document.querySelectorAll('.addToCart');
 
+const addWishlistItem = () => {
+    textWished.textContent = parseInt(textWished.textContent) + 1;
+}
 
+const addCartItem = () => {
+    textCart.textContent = parseInt(textCart.textContent) + 1;
+}
+
+btnAddToWishlist.forEach(btn => btn.addEventListener('click', addWishlistItem));
+btnAddToCart.forEach(item => item.addEventListener('click', addCartItem));
 
 
 

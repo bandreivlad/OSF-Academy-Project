@@ -453,6 +453,8 @@ body {
 }
 .mobile-footer li {
   color: #ffffff;
+  position: relative;
+  padding: 0.1875rem 0.25rem;
 }
 .mobile-footer li:hover {
   cursor: pointer;
@@ -469,6 +471,24 @@ body {
     color: rgba(69, 65, 62, 0.5);
     font-size: 1.4375rem;
   }
+}
+.mobile-footer li .items-number {
+  width: 0.875rem;
+  height: 0.875rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 2px solid #84bc22;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.mobile-footer li .items-number p {
+  color: #84bc22;
+  font-family: "Lato", sans-serif;
+  font-size: 0.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0.0625rem;
 }
 @media only screen and (min-width: 768px) {
   .mobile-footer {

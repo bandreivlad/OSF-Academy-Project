@@ -259,6 +259,8 @@
     }
     li {
         color: $white;
+        position: relative;
+        padding: px-to-rem(3px) px-to-rem(4px);
         &:hover {
             cursor: pointer;
         }
@@ -271,6 +273,23 @@
             @media only screen and #{$brk-med} {
                 color: rgba($text-color-dk, 0.5);
                 font-size: px-to-rem(23px)
+            }
+        }
+        .items-number {
+            @include dimension(px-to-rem(14px), px-to-rem(14px));
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 2px solid $lime-color;
+            border-radius: 50%;
+            background-color: $white;
+            p {
+                color: $lime-color;
+                font-family: $main-font;
+                font-size: px-to-rem(8px);
+                font-weight: 700;
+                text-align: center;
+                margin-top: px-to-rem(1px);
             }
         }
     }
