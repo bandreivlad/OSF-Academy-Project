@@ -44,7 +44,7 @@
             }
         }
         &:last-child {
-            padding-bottom: px-to-rem(15px);
+            padding-bottom: 0px;
         }
         @media only screen and #{$brk-med} {
             @include flexy(flex, row, space-around);
