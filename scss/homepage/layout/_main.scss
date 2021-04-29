@@ -2,6 +2,7 @@
 @import '../components/popular-items';
 @import '../components/banner';
 @import '../components/services';
+@import '../components/featured-products';
 
 .main-content {
     @include dimension(100%, auto);

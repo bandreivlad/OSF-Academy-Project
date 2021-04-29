@@ -39,18 +39,8 @@ let angleFooterFirst = 180;
 let angleFooterSecond = 180;
 let angleFooterThird = 180;
 
-let screenWidth = 0;
-
-const reportWindowWidth = () => {
-    screenWidth = window.innerWidth;
-    return screenWidth;
-}
-
-window.addEventListener('resize', reportWindowWidth);
-
-
 // Functionality for mobile menus
-if (screenWidth < 768) {
+if (window.screen.width < 768) {
     // Header
     const openMenu = () => {
         firstLevel.style.display = 'inline-flex';

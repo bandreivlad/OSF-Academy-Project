@@ -1,0 +1,123 @@
+.featured-products {
+    display: none;
+    @media only screen and #{$brk-med} {
+        @include dimension(100%, auto);
+        display: block;
+        background-color: $dark-gray;
+        color: $white;
+    }
+    &-container {
+        @media only screen and #{$brk-med} {
+            // @include dimension(100%, auto);
+            @include flexy(flex, column, center, center);
+            padding: px-to-rem(44px) px-to-perc(28px) px-to-rem(64px);
+        }
+        &-header {
+            text-align: center;
+            margin-bottom: px-to-rem(21px);
+            h5 {
+                @media only screen and #{$brk-med} {
+                    text-transform: capitalize;
+                    font-size: px-to-rem(18px);
+                    font-family: $main-font;
+                    font-weight: 700;
+                }
+            }
+            p {
+                @media only screen and #{$brk-med} {
+                    font-family: $main-font;
+                    font-size: px-to-rem(12px);
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        &-controls {
+            @media only screen and #{$brk-med} {
+                @include dimension(px-to-rem(360px), 30px);
+                @include flexy(flex, row, center, center);
+                position: relative;
+                margin-bottom: px-to-rem(32px);
+            }
+            @media only screen and #{$brk-lg} {
+                width: px-to-rem(620px);
+            }
+            a {
+                @media only screen and #{$brk-med} {
+                    @include dimension(px-to-rem(30px), px-to-rem(30px));
+                    position: absolute;
+                    background-color: lighten($dark-gray, 5%);
+                    &:first-child::after {
+                        content: "";
+                        display: block;
+                        width: px-to-rem(125px);
+                        height: 3px;
+                        background: $white;
+                        left: 35px;
+                        top: 45%;
+                        position: absolute;
+                    }
+                    &:last-child::before {
+                        content: "";
+                        display: block;
+                        width: px-to-rem(125px);
+                        height: 3px;
+                        background: $white;
+                        right: 35px;
+                        top: 45%;
+                        position: absolute;
+                    }
+                }
+                @media only screen and #{$brk-lg} {
+                    &:first-child::after {
+                        width: px-to-rem(250px);
+                    }
+                    &:last-child::before {
+                        width: px-to-rem(250px);
+                    }
+                }
+                span {
+                    @media only screen and #{$brk-med} {
+                        @include dimension(10px, 10px);
+                    }
+                }
+            }
+            p {
+                @media only screen and #{$brk-med} {
+                    margin: auto;
+                }
+            }
+        }
+        &-cards-carousel {
+            &-item {
+                .cards-wrapper{
+                    @media only screen and #{$brk-med} {
+                        @include dimension(100%, auto);
+                        display: grid;
+                        grid-template-columns: repeat(2, px-to-rem(270px));
+                        grid-template-rows: repeat(2, px-to-rem(296px));
+                        justify-content: center;
+                        gap: px-to-rem(40px);
+                    }
+                    @media only screen and #{$brk-lg} {
+                        grid-template-columns: repeat(4, px-to-rem(270px));
+                        grid-template-rows: px-to-rem(296px);
+                        // gap
+                    }
+                    img {
+                        @media only screen and #{$brk-med} {
+                            @include dimension(100%, px-to-rem(190px))
+                        }
+                        object-fit: cover;
+                    }
+                    p {
+                        color: $lime-color;
+                        font-family: $main-font;
+                        font-size: px-to-rem(14px);
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+}
+
